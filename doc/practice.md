@@ -10,9 +10,8 @@ you see something else, that is worth writing down.
 
 ## Before you start
 
-- VS Code, with RulealizeStudio.Avalonia installed from the `.vsix` on its
-  [GitHub Releases](https://github.com/reny-develop/RulealizeStudio.Avalonia/releases)
-  (**Extensions**, `…`, **Install from VSIX…**), and git.
+- VS Code, with RulealizeStudio.Avalonia installed — from **Extensions**, searching for it — and
+  git.
 - An agent that can work in a folder on this computer — Claude Code, say — signed in.
 - A small application you want: one window, two or three things somebody does on it, and what
   should not be allowed. For example: *order tea — choose a size, one to five cups, and order; an

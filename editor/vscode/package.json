@@ -2,9 +2,17 @@
   "name": "rulealizestudio-avalonia",
   "displayName": "RulealizeStudio.Avalonia",
   "description": "%description%",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "publisher": "reny-develop",
   "icon": "media/icon.png",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/reny-develop/RulealizeStudio.Avalonia.git"
+  },
+  "homepage": "https://github.com/reny-develop/RulealizeStudio.Avalonia#readme",
+  "bugs": {
+    "url": "https://github.com/reny-develop/RulealizeStudio.Avalonia/issues"
+  },
   "private": true,
   "license": "Apache-2.0",
   "engines": {

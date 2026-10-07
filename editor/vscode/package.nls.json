@@ -1,5 +1,5 @@
 {
-  "description": "Open a rule set as what it means: change a value it states or what one of its lists holds, see what that did to what is legal, and say whether it is what you meant.",
+  "description": "Make an Avalonia application from a screen you design and what you write it should do, with the rules written by your agent; then read its test cases on the application's own window, and ask for changes until it is what you meant.",
   "command.category": "RulealizeStudio.Avalonia",
   "command.screens.title": "Show test cases",
   "command.start.title": "Start from an example",

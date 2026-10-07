@@ -14,9 +14,11 @@ answer becomes is the XAML's to say.
 
 ## Installing it
 
-RulealizeStudio.Avalonia is a `.vsix` on this repository's
-[GitHub Releases](https://github.com/reny-develop/RulealizeStudio.Avalonia/releases): download the
-newest, then in VS Code **Extensions**, `…`, **Install from VSIX…**, and choose it.
+RulealizeStudio.Avalonia is in the
+[Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=reny-develop.rulealizestudio-avalonia):
+**Extensions** in VS Code, search for it, and **Install**. The same extension is a `.vsix` on this
+repository's [GitHub Releases](https://github.com/reny-develop/RulealizeStudio.Avalonia/releases),
+installed with **Extensions**, `…`, **Install from VSIX…**.
 
 On a machine with only VS Code, the extension runs on the .NET runtime already there, or else one
 the [.NET Install Tool](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.vscode-dotnet-runtime)
@@ -371,7 +373,7 @@ a new application. So it also needs the samples built,
 `rulealize` and `ruledger` on the path — named in the settings the windows start with — somewhere
 to fetch vocabularies from, and `feed/` filled.
 
-`npm run package` there writes `rulealizestudio-avalonia-0.2.0.vsix`, which is what somebody installs:
+`npm run package` there writes `rulealizestudio-avalonia-0.2.1.vsix`, which is what somebody installs:
 the server published inside it, framework-dependent and for every platform; the newest of each
 package in `feed/`, while they are not on nuget.org; and the example the walkthrough starts from,
 countdown's own files with the template's project listing its vocabularies; what it fetches on a
