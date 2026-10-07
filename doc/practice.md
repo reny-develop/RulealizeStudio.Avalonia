@@ -59,6 +59,15 @@ its title and its background. Write the words in your own language.
 **You see** the window change within a second of each change, as it will look: each control where
 you let go of it, at the size you gave it.
 
+Every property under **Properties** is Avalonia's: the control's own, those it inherits, and those
+what holds it lends it, written with that one's name first — **Grid.Row**. What each does is
+Avalonia's to say. [Controls](https://docs.avaloniaui.net/controls) explains each control and the
+properties it is mostly given, and [Positioning controls](https://docs.avaloniaui.net/docs/layout/positioning-controls)
+its alignment, margin and padding. Every property, each with a sentence, is on the control's page of
+[Avalonia's API reference](https://api-docs.avaloniaui.net/), found by its name in the search there;
+one lent by what holds it is on that one's page, among its fields — **Grid.Row** as **RowProperty**
+on **Grid**'s.
+
 Another window — one that asks *Order these?*, say — is the + on **Screens** in the view — it
 shows where the pointer is on that line — and a name; a window is deleted with the bin on its line. It opens beside the first, empty, and is designed the same way. When it
 appears and when it goes, its × included, is not set here: say it in the specification in step 5,
