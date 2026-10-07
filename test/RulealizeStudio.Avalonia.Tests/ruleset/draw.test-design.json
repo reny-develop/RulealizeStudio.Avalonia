@@ -1,0 +1,5405 @@
+{
+  "$schema": "ruledger/test-design/v2",
+  "ruleSet": "draw@1.0.0",
+  "settings": {
+    "states": 3000,
+    "candidates": 10000,
+    "outcomes": 64
+  },
+  "observed": [
+    "total"
+  ],
+  "collapsed": [],
+  "unreached": 0,
+  "edits": [],
+  "states": [
+    {
+      "name": "#0",
+      "state": {
+        "$schema": "rulealize/state/v1",
+        "ruleSet": "draw@1.0.0",
+        "data": {
+          "total": 0
+        }
+      },
+      "evaluated": 2,
+      "moves": [
+        {
+          "input": "roll",
+          "lands": [
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  1
+                ]
+              },
+              "to": "#1"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  2
+                ]
+              },
+              "to": "#2"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  3
+                ]
+              },
+              "to": "#3"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  4
+                ]
+              },
+              "to": "#4"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  5
+                ]
+              },
+              "to": "#5"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  6
+                ]
+              },
+              "to": "#6"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "#1",
+      "from": "#0",
+      "by": "roll",
+      "state": {
+        "$schema": "rulealize/state/v1",
+        "ruleSet": "draw@1.0.0",
+        "data": {
+          "total": 1
+        }
+      },
+      "evaluated": 2,
+      "moves": [
+        {
+          "input": "roll",
+          "lands": [
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  1
+                ]
+              },
+              "to": "#2"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  2
+                ]
+              },
+              "to": "#3"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  3
+                ]
+              },
+              "to": "#4"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  4
+                ]
+              },
+              "to": "#5"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  5
+                ]
+              },
+              "to": "#6"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  6
+                ]
+              },
+              "to": "#7"
+            }
+          ]
+        },
+        {
+          "input": "stop",
+          "to": "#0"
+        }
+      ]
+    },
+    {
+      "name": "#2",
+      "from": "#1",
+      "by": "roll",
+      "state": {
+        "$schema": "rulealize/state/v1",
+        "ruleSet": "draw@1.0.0",
+        "data": {
+          "total": 2
+        }
+      },
+      "evaluated": 2,
+      "moves": [
+        {
+          "input": "roll",
+          "lands": [
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  1
+                ]
+              },
+              "to": "#3"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  2
+                ]
+              },
+              "to": "#4"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  3
+                ]
+              },
+              "to": "#5"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  4
+                ]
+              },
+              "to": "#6"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  5
+                ]
+              },
+              "to": "#7"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  6
+                ]
+              },
+              "to": "#8"
+            }
+          ]
+        },
+        {
+          "input": "stop",
+          "to": "#0"
+        }
+      ]
+    },
+    {
+      "name": "#3",
+      "from": "#2",
+      "by": "roll",
+      "state": {
+        "$schema": "rulealize/state/v1",
+        "ruleSet": "draw@1.0.0",
+        "data": {
+          "total": 3
+        }
+      },
+      "evaluated": 2,
+      "moves": [
+        {
+          "input": "roll",
+          "lands": [
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  1
+                ]
+              },
+              "to": "#4"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  2
+                ]
+              },
+              "to": "#5"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  3
+                ]
+              },
+              "to": "#6"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  4
+                ]
+              },
+              "to": "#7"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  5
+                ]
+              },
+              "to": "#8"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  6
+                ]
+              },
+              "to": "#9"
+            }
+          ]
+        },
+        {
+          "input": "stop",
+          "to": "#0"
+        }
+      ]
+    },
+    {
+      "name": "#4",
+      "from": "#3",
+      "by": "roll",
+      "state": {
+        "$schema": "rulealize/state/v1",
+        "ruleSet": "draw@1.0.0",
+        "data": {
+          "total": 4
+        }
+      },
+      "evaluated": 2,
+      "moves": [
+        {
+          "input": "roll",
+          "lands": [
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  1
+                ]
+              },
+              "to": "#5"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  2
+                ]
+              },
+              "to": "#6"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  3
+                ]
+              },
+              "to": "#7"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  4
+                ]
+              },
+              "to": "#8"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  5
+                ]
+              },
+              "to": "#9"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  6
+                ]
+              },
+              "to": "#10"
+            }
+          ]
+        },
+        {
+          "input": "stop",
+          "to": "#0"
+        }
+      ]
+    },
+    {
+      "name": "#5",
+      "from": "#4",
+      "by": "roll",
+      "state": {
+        "$schema": "rulealize/state/v1",
+        "ruleSet": "draw@1.0.0",
+        "data": {
+          "total": 5
+        }
+      },
+      "evaluated": 2,
+      "moves": [
+        {
+          "input": "roll",
+          "lands": [
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  1
+                ]
+              },
+              "to": "#6"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  2
+                ]
+              },
+              "to": "#7"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  3
+                ]
+              },
+              "to": "#8"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  4
+                ]
+              },
+              "to": "#9"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  5
+                ]
+              },
+              "to": "#10"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  6
+                ]
+              },
+              "to": "#11"
+            }
+          ]
+        },
+        {
+          "input": "stop",
+          "to": "#0"
+        }
+      ]
+    },
+    {
+      "name": "#6",
+      "from": "#5",
+      "by": "roll",
+      "state": {
+        "$schema": "rulealize/state/v1",
+        "ruleSet": "draw@1.0.0",
+        "data": {
+          "total": 6
+        }
+      },
+      "evaluated": 2,
+      "moves": [
+        {
+          "input": "roll",
+          "lands": [
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  1
+                ]
+              },
+              "to": "#7"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  2
+                ]
+              },
+              "to": "#8"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  3
+                ]
+              },
+              "to": "#9"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  4
+                ]
+              },
+              "to": "#10"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  5
+                ]
+              },
+              "to": "#11"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  6
+                ]
+              },
+              "to": "#12"
+            }
+          ]
+        },
+        {
+          "input": "stop",
+          "to": "#0"
+        }
+      ]
+    },
+    {
+      "name": "#7",
+      "from": "#6",
+      "by": "roll",
+      "state": {
+        "$schema": "rulealize/state/v1",
+        "ruleSet": "draw@1.0.0",
+        "data": {
+          "total": 7
+        }
+      },
+      "evaluated": 2,
+      "moves": [
+        {
+          "input": "roll",
+          "lands": [
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  1
+                ]
+              },
+              "to": "#8"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  2
+                ]
+              },
+              "to": "#9"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  3
+                ]
+              },
+              "to": "#10"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  4
+                ]
+              },
+              "to": "#11"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  5
+                ]
+              },
+              "to": "#12"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  6
+                ]
+              },
+              "to": "#13"
+            }
+          ]
+        },
+        {
+          "input": "stop",
+          "to": "#0"
+        }
+      ]
+    },
+    {
+      "name": "#8",
+      "from": "#7",
+      "by": "roll",
+      "state": {
+        "$schema": "rulealize/state/v1",
+        "ruleSet": "draw@1.0.0",
+        "data": {
+          "total": 8
+        }
+      },
+      "evaluated": 2,
+      "moves": [
+        {
+          "input": "roll",
+          "lands": [
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  1
+                ]
+              },
+              "to": "#9"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  2
+                ]
+              },
+              "to": "#10"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  3
+                ]
+              },
+              "to": "#11"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  4
+                ]
+              },
+              "to": "#12"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  5
+                ]
+              },
+              "to": "#13"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  6
+                ]
+              },
+              "to": "#14"
+            }
+          ]
+        },
+        {
+          "input": "stop",
+          "to": "#0"
+        }
+      ]
+    },
+    {
+      "name": "#9",
+      "from": "#8",
+      "by": "roll",
+      "state": {
+        "$schema": "rulealize/state/v1",
+        "ruleSet": "draw@1.0.0",
+        "data": {
+          "total": 9
+        }
+      },
+      "evaluated": 2,
+      "moves": [
+        {
+          "input": "roll",
+          "lands": [
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  1
+                ]
+              },
+              "to": "#10"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  2
+                ]
+              },
+              "to": "#11"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  3
+                ]
+              },
+              "to": "#12"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  4
+                ]
+              },
+              "to": "#13"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  5
+                ]
+              },
+              "to": "#14"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  6
+                ]
+              },
+              "to": "#15"
+            }
+          ]
+        },
+        {
+          "input": "stop",
+          "to": "#0"
+        }
+      ]
+    },
+    {
+      "name": "#10",
+      "from": "#9",
+      "by": "roll",
+      "state": {
+        "$schema": "rulealize/state/v1",
+        "ruleSet": "draw@1.0.0",
+        "data": {
+          "total": 10
+        }
+      },
+      "evaluated": 2,
+      "moves": [
+        {
+          "input": "roll",
+          "lands": [
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  1
+                ]
+              },
+              "to": "#11"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  2
+                ]
+              },
+              "to": "#12"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  3
+                ]
+              },
+              "to": "#13"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  4
+                ]
+              },
+              "to": "#14"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  5
+                ]
+              },
+              "to": "#15"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  6
+                ]
+              },
+              "to": "#16"
+            }
+          ]
+        },
+        {
+          "input": "stop",
+          "to": "#0"
+        }
+      ]
+    },
+    {
+      "name": "#11",
+      "from": "#10",
+      "by": "roll",
+      "state": {
+        "$schema": "rulealize/state/v1",
+        "ruleSet": "draw@1.0.0",
+        "data": {
+          "total": 11
+        }
+      },
+      "evaluated": 2,
+      "moves": [
+        {
+          "input": "roll",
+          "lands": [
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  1
+                ]
+              },
+              "to": "#12"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  2
+                ]
+              },
+              "to": "#13"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  3
+                ]
+              },
+              "to": "#14"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  4
+                ]
+              },
+              "to": "#15"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  5
+                ]
+              },
+              "to": "#16"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  6
+                ]
+              },
+              "to": "#17"
+            }
+          ]
+        },
+        {
+          "input": "stop",
+          "to": "#0"
+        }
+      ]
+    },
+    {
+      "name": "#12",
+      "from": "#11",
+      "by": "roll",
+      "state": {
+        "$schema": "rulealize/state/v1",
+        "ruleSet": "draw@1.0.0",
+        "data": {
+          "total": 12
+        }
+      },
+      "evaluated": 2,
+      "moves": [
+        {
+          "input": "roll",
+          "lands": [
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  1
+                ]
+              },
+              "to": "#13"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  2
+                ]
+              },
+              "to": "#14"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  3
+                ]
+              },
+              "to": "#15"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  4
+                ]
+              },
+              "to": "#16"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  5
+                ]
+              },
+              "to": "#17"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  6
+                ]
+              },
+              "to": "#18"
+            }
+          ]
+        },
+        {
+          "input": "stop",
+          "to": "#0"
+        }
+      ]
+    },
+    {
+      "name": "#13",
+      "from": "#12",
+      "by": "roll",
+      "state": {
+        "$schema": "rulealize/state/v1",
+        "ruleSet": "draw@1.0.0",
+        "data": {
+          "total": 13
+        }
+      },
+      "evaluated": 2,
+      "moves": [
+        {
+          "input": "roll",
+          "lands": [
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  1
+                ]
+              },
+              "to": "#14"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  2
+                ]
+              },
+              "to": "#15"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  3
+                ]
+              },
+              "to": "#16"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  4
+                ]
+              },
+              "to": "#17"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  5
+                ]
+              },
+              "to": "#18"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  6
+                ]
+              },
+              "to": "#19"
+            }
+          ]
+        },
+        {
+          "input": "stop",
+          "to": "#0"
+        }
+      ]
+    },
+    {
+      "name": "#14",
+      "from": "#13",
+      "by": "roll",
+      "state": {
+        "$schema": "rulealize/state/v1",
+        "ruleSet": "draw@1.0.0",
+        "data": {
+          "total": 14
+        }
+      },
+      "evaluated": 2,
+      "moves": [
+        {
+          "input": "roll",
+          "lands": [
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  1
+                ]
+              },
+              "to": "#15"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  2
+                ]
+              },
+              "to": "#16"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  3
+                ]
+              },
+              "to": "#17"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  4
+                ]
+              },
+              "to": "#18"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  5
+                ]
+              },
+              "to": "#19"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  6
+                ]
+              },
+              "to": "#20"
+            }
+          ]
+        },
+        {
+          "input": "stop",
+          "to": "#0"
+        }
+      ]
+    },
+    {
+      "name": "#15",
+      "from": "#14",
+      "by": "roll",
+      "state": {
+        "$schema": "rulealize/state/v1",
+        "ruleSet": "draw@1.0.0",
+        "data": {
+          "total": 15
+        }
+      },
+      "evaluated": 2,
+      "moves": [
+        {
+          "input": "roll",
+          "lands": [
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  1
+                ]
+              },
+              "to": "#16"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  2
+                ]
+              },
+              "to": "#17"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  3
+                ]
+              },
+              "to": "#18"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  4
+                ]
+              },
+              "to": "#19"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  5
+                ]
+              },
+              "to": "#20"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  6
+                ]
+              },
+              "to": "#21"
+            }
+          ]
+        },
+        {
+          "input": "stop",
+          "to": "#0"
+        }
+      ]
+    },
+    {
+      "name": "#16",
+      "from": "#15",
+      "by": "roll",
+      "state": {
+        "$schema": "rulealize/state/v1",
+        "ruleSet": "draw@1.0.0",
+        "data": {
+          "total": 16
+        }
+      },
+      "evaluated": 2,
+      "moves": [
+        {
+          "input": "roll",
+          "lands": [
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  1
+                ]
+              },
+              "to": "#17"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  2
+                ]
+              },
+              "to": "#18"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  3
+                ]
+              },
+              "to": "#19"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  4
+                ]
+              },
+              "to": "#20"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  5
+                ]
+              },
+              "to": "#21"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  6
+                ]
+              },
+              "to": "#22"
+            }
+          ]
+        },
+        {
+          "input": "stop",
+          "to": "#0"
+        }
+      ]
+    },
+    {
+      "name": "#17",
+      "from": "#16",
+      "by": "roll",
+      "state": {
+        "$schema": "rulealize/state/v1",
+        "ruleSet": "draw@1.0.0",
+        "data": {
+          "total": 17
+        }
+      },
+      "evaluated": 2,
+      "moves": [
+        {
+          "input": "roll",
+          "lands": [
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  1
+                ]
+              },
+              "to": "#18"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  2
+                ]
+              },
+              "to": "#19"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  3
+                ]
+              },
+              "to": "#20"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  4
+                ]
+              },
+              "to": "#21"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  5
+                ]
+              },
+              "to": "#22"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  6
+                ]
+              },
+              "to": "#23"
+            }
+          ]
+        },
+        {
+          "input": "stop",
+          "to": "#0"
+        }
+      ]
+    },
+    {
+      "name": "#18",
+      "from": "#17",
+      "by": "roll",
+      "state": {
+        "$schema": "rulealize/state/v1",
+        "ruleSet": "draw@1.0.0",
+        "data": {
+          "total": 18
+        }
+      },
+      "evaluated": 2,
+      "moves": [
+        {
+          "input": "roll",
+          "lands": [
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  1
+                ]
+              },
+              "to": "#19"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  2
+                ]
+              },
+              "to": "#20"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  3
+                ]
+              },
+              "to": "#21"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  4
+                ]
+              },
+              "to": "#22"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  5
+                ]
+              },
+              "to": "#23"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  6
+                ]
+              },
+              "to": "#24"
+            }
+          ]
+        },
+        {
+          "input": "stop",
+          "to": "#0"
+        }
+      ]
+    },
+    {
+      "name": "#19",
+      "from": "#18",
+      "by": "roll",
+      "state": {
+        "$schema": "rulealize/state/v1",
+        "ruleSet": "draw@1.0.0",
+        "data": {
+          "total": 19
+        }
+      },
+      "evaluated": 2,
+      "moves": [
+        {
+          "input": "roll",
+          "lands": [
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  1
+                ]
+              },
+              "to": "#20"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  2
+                ]
+              },
+              "to": "#21"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  3
+                ]
+              },
+              "to": "#22"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  4
+                ]
+              },
+              "to": "#23"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  5
+                ]
+              },
+              "to": "#24"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  6
+                ]
+              },
+              "to": "#25"
+            }
+          ]
+        },
+        {
+          "input": "stop",
+          "to": "#0"
+        }
+      ]
+    },
+    {
+      "name": "#20",
+      "from": "#19",
+      "by": "roll",
+      "state": {
+        "$schema": "rulealize/state/v1",
+        "ruleSet": "draw@1.0.0",
+        "data": {
+          "total": 20
+        }
+      },
+      "evaluated": 2,
+      "moves": [
+        {
+          "input": "roll",
+          "lands": [
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  1
+                ]
+              },
+              "to": "#21"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  2
+                ]
+              },
+              "to": "#22"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  3
+                ]
+              },
+              "to": "#23"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  4
+                ]
+              },
+              "to": "#24"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  5
+                ]
+              },
+              "to": "#25"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  6
+                ]
+              },
+              "to": "#26"
+            }
+          ]
+        },
+        {
+          "input": "stop",
+          "to": "#0"
+        }
+      ]
+    },
+    {
+      "name": "#21",
+      "from": "#20",
+      "by": "roll",
+      "state": {
+        "$schema": "rulealize/state/v1",
+        "ruleSet": "draw@1.0.0",
+        "data": {
+          "total": 21
+        }
+      },
+      "evaluated": 2,
+      "moves": [
+        {
+          "input": "roll",
+          "lands": [
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  1
+                ]
+              },
+              "to": "#22"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  2
+                ]
+              },
+              "to": "#23"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  3
+                ]
+              },
+              "to": "#24"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  4
+                ]
+              },
+              "to": "#25"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  5
+                ]
+              },
+              "to": "#26"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  6
+                ]
+              },
+              "to": "#27"
+            }
+          ]
+        },
+        {
+          "input": "stop",
+          "to": "#0"
+        }
+      ]
+    },
+    {
+      "name": "#22",
+      "from": "#21",
+      "by": "roll",
+      "state": {
+        "$schema": "rulealize/state/v1",
+        "ruleSet": "draw@1.0.0",
+        "data": {
+          "total": 22
+        }
+      },
+      "evaluated": 2,
+      "moves": [
+        {
+          "input": "roll",
+          "lands": [
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  1
+                ]
+              },
+              "to": "#23"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  2
+                ]
+              },
+              "to": "#24"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  3
+                ]
+              },
+              "to": "#25"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  4
+                ]
+              },
+              "to": "#26"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  5
+                ]
+              },
+              "to": "#27"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  6
+                ]
+              },
+              "to": "#28"
+            }
+          ]
+        },
+        {
+          "input": "stop",
+          "to": "#0"
+        }
+      ]
+    },
+    {
+      "name": "#23",
+      "from": "#22",
+      "by": "roll",
+      "state": {
+        "$schema": "rulealize/state/v1",
+        "ruleSet": "draw@1.0.0",
+        "data": {
+          "total": 23
+        }
+      },
+      "evaluated": 2,
+      "moves": [
+        {
+          "input": "roll",
+          "lands": [
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  1
+                ]
+              },
+              "to": "#24"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  2
+                ]
+              },
+              "to": "#25"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  3
+                ]
+              },
+              "to": "#26"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  4
+                ]
+              },
+              "to": "#27"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  5
+                ]
+              },
+              "to": "#28"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  6
+                ]
+              },
+              "to": "#29"
+            }
+          ]
+        },
+        {
+          "input": "stop",
+          "to": "#0"
+        }
+      ]
+    },
+    {
+      "name": "#24",
+      "from": "#23",
+      "by": "roll",
+      "state": {
+        "$schema": "rulealize/state/v1",
+        "ruleSet": "draw@1.0.0",
+        "data": {
+          "total": 24
+        }
+      },
+      "evaluated": 2,
+      "moves": [
+        {
+          "input": "roll",
+          "lands": [
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  1
+                ]
+              },
+              "to": "#25"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  2
+                ]
+              },
+              "to": "#26"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  3
+                ]
+              },
+              "to": "#27"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  4
+                ]
+              },
+              "to": "#28"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  5
+                ]
+              },
+              "to": "#29"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  6
+                ]
+              },
+              "to": "#30"
+            }
+          ]
+        },
+        {
+          "input": "stop",
+          "to": "#0"
+        }
+      ]
+    },
+    {
+      "name": "#25",
+      "from": "#24",
+      "by": "roll",
+      "state": {
+        "$schema": "rulealize/state/v1",
+        "ruleSet": "draw@1.0.0",
+        "data": {
+          "total": 25
+        }
+      },
+      "evaluated": 2,
+      "moves": [
+        {
+          "input": "roll",
+          "lands": [
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  1
+                ]
+              },
+              "to": "#26"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  2
+                ]
+              },
+              "to": "#27"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  3
+                ]
+              },
+              "to": "#28"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  4
+                ]
+              },
+              "to": "#29"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  5
+                ]
+              },
+              "to": "#30"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  6
+                ]
+              },
+              "to": "#31"
+            }
+          ]
+        },
+        {
+          "input": "stop",
+          "to": "#0"
+        }
+      ]
+    },
+    {
+      "name": "#26",
+      "from": "#25",
+      "by": "roll",
+      "state": {
+        "$schema": "rulealize/state/v1",
+        "ruleSet": "draw@1.0.0",
+        "data": {
+          "total": 26
+        }
+      },
+      "evaluated": 2,
+      "moves": [
+        {
+          "input": "roll",
+          "lands": [
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  1
+                ]
+              },
+              "to": "#27"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  2
+                ]
+              },
+              "to": "#28"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  3
+                ]
+              },
+              "to": "#29"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  4
+                ]
+              },
+              "to": "#30"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  5
+                ]
+              },
+              "to": "#31"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  6
+                ]
+              },
+              "to": "#32"
+            }
+          ]
+        },
+        {
+          "input": "stop",
+          "to": "#0"
+        }
+      ]
+    },
+    {
+      "name": "#27",
+      "from": "#26",
+      "by": "roll",
+      "state": {
+        "$schema": "rulealize/state/v1",
+        "ruleSet": "draw@1.0.0",
+        "data": {
+          "total": 27
+        }
+      },
+      "evaluated": 2,
+      "moves": [
+        {
+          "input": "roll",
+          "lands": [
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  1
+                ]
+              },
+              "to": "#28"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  2
+                ]
+              },
+              "to": "#29"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  3
+                ]
+              },
+              "to": "#30"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  4
+                ]
+              },
+              "to": "#31"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  5
+                ]
+              },
+              "to": "#32"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  6
+                ]
+              },
+              "to": "#33"
+            }
+          ]
+        },
+        {
+          "input": "stop",
+          "to": "#0"
+        }
+      ]
+    },
+    {
+      "name": "#28",
+      "from": "#27",
+      "by": "roll",
+      "state": {
+        "$schema": "rulealize/state/v1",
+        "ruleSet": "draw@1.0.0",
+        "data": {
+          "total": 28
+        }
+      },
+      "evaluated": 2,
+      "moves": [
+        {
+          "input": "roll",
+          "lands": [
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  1
+                ]
+              },
+              "to": "#29"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  2
+                ]
+              },
+              "to": "#30"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  3
+                ]
+              },
+              "to": "#31"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  4
+                ]
+              },
+              "to": "#32"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  5
+                ]
+              },
+              "to": "#33"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  6
+                ]
+              },
+              "to": "#34"
+            }
+          ]
+        },
+        {
+          "input": "stop",
+          "to": "#0"
+        }
+      ]
+    },
+    {
+      "name": "#29",
+      "from": "#28",
+      "by": "roll",
+      "state": {
+        "$schema": "rulealize/state/v1",
+        "ruleSet": "draw@1.0.0",
+        "data": {
+          "total": 29
+        }
+      },
+      "evaluated": 2,
+      "moves": [
+        {
+          "input": "roll",
+          "lands": [
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  1
+                ]
+              },
+              "to": "#30"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  2
+                ]
+              },
+              "to": "#31"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  3
+                ]
+              },
+              "to": "#32"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  4
+                ]
+              },
+              "to": "#33"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  5
+                ]
+              },
+              "to": "#34"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  6
+                ]
+              },
+              "to": "#35"
+            }
+          ]
+        },
+        {
+          "input": "stop",
+          "to": "#0"
+        }
+      ]
+    },
+    {
+      "name": "#30",
+      "from": "#29",
+      "by": "roll",
+      "state": {
+        "$schema": "rulealize/state/v1",
+        "ruleSet": "draw@1.0.0",
+        "data": {
+          "total": 30
+        }
+      },
+      "evaluated": 2,
+      "moves": [
+        {
+          "input": "roll",
+          "lands": [
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  1
+                ]
+              },
+              "to": "#31"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  2
+                ]
+              },
+              "to": "#32"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  3
+                ]
+              },
+              "to": "#33"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  4
+                ]
+              },
+              "to": "#34"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  5
+                ]
+              },
+              "to": "#35"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  6
+                ]
+              },
+              "to": "#36"
+            }
+          ]
+        },
+        {
+          "input": "stop",
+          "to": "#0"
+        }
+      ]
+    },
+    {
+      "name": "#31",
+      "from": "#30",
+      "by": "roll",
+      "state": {
+        "$schema": "rulealize/state/v1",
+        "ruleSet": "draw@1.0.0",
+        "data": {
+          "total": 31
+        }
+      },
+      "evaluated": 2,
+      "moves": [
+        {
+          "input": "roll",
+          "lands": [
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  1
+                ]
+              },
+              "to": "#32"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  2
+                ]
+              },
+              "to": "#33"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  3
+                ]
+              },
+              "to": "#34"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  4
+                ]
+              },
+              "to": "#35"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  5
+                ]
+              },
+              "to": "#36"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  6
+                ]
+              },
+              "to": "#37"
+            }
+          ]
+        },
+        {
+          "input": "stop",
+          "to": "#0"
+        }
+      ]
+    },
+    {
+      "name": "#32",
+      "from": "#31",
+      "by": "roll",
+      "state": {
+        "$schema": "rulealize/state/v1",
+        "ruleSet": "draw@1.0.0",
+        "data": {
+          "total": 32
+        }
+      },
+      "evaluated": 2,
+      "moves": [
+        {
+          "input": "roll",
+          "lands": [
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  1
+                ]
+              },
+              "to": "#33"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  2
+                ]
+              },
+              "to": "#34"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  3
+                ]
+              },
+              "to": "#35"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  4
+                ]
+              },
+              "to": "#36"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  5
+                ]
+              },
+              "to": "#37"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  6
+                ]
+              },
+              "to": "#38"
+            }
+          ]
+        },
+        {
+          "input": "stop",
+          "to": "#0"
+        }
+      ]
+    },
+    {
+      "name": "#33",
+      "from": "#32",
+      "by": "roll",
+      "state": {
+        "$schema": "rulealize/state/v1",
+        "ruleSet": "draw@1.0.0",
+        "data": {
+          "total": 33
+        }
+      },
+      "evaluated": 2,
+      "moves": [
+        {
+          "input": "roll",
+          "lands": [
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  1
+                ]
+              },
+              "to": "#34"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  2
+                ]
+              },
+              "to": "#35"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  3
+                ]
+              },
+              "to": "#36"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  4
+                ]
+              },
+              "to": "#37"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  5
+                ]
+              },
+              "to": "#38"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  6
+                ]
+              },
+              "to": "#39"
+            }
+          ]
+        },
+        {
+          "input": "stop",
+          "to": "#0"
+        }
+      ]
+    },
+    {
+      "name": "#34",
+      "from": "#33",
+      "by": "roll",
+      "state": {
+        "$schema": "rulealize/state/v1",
+        "ruleSet": "draw@1.0.0",
+        "data": {
+          "total": 34
+        }
+      },
+      "evaluated": 2,
+      "moves": [
+        {
+          "input": "roll",
+          "lands": [
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  1
+                ]
+              },
+              "to": "#35"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  2
+                ]
+              },
+              "to": "#36"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  3
+                ]
+              },
+              "to": "#37"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  4
+                ]
+              },
+              "to": "#38"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  5
+                ]
+              },
+              "to": "#39"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  6
+                ]
+              },
+              "to": "#40"
+            }
+          ]
+        },
+        {
+          "input": "stop",
+          "to": "#0"
+        }
+      ]
+    },
+    {
+      "name": "#35",
+      "from": "#34",
+      "by": "roll",
+      "state": {
+        "$schema": "rulealize/state/v1",
+        "ruleSet": "draw@1.0.0",
+        "data": {
+          "total": 35
+        }
+      },
+      "evaluated": 2,
+      "moves": [
+        {
+          "input": "roll",
+          "lands": [
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  1
+                ]
+              },
+              "to": "#36"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  2
+                ]
+              },
+              "to": "#37"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  3
+                ]
+              },
+              "to": "#38"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  4
+                ]
+              },
+              "to": "#39"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  5
+                ]
+              },
+              "to": "#40"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  6
+                ]
+              },
+              "to": "#41"
+            }
+          ]
+        },
+        {
+          "input": "stop",
+          "to": "#0"
+        }
+      ]
+    },
+    {
+      "name": "#36",
+      "from": "#35",
+      "by": "roll",
+      "state": {
+        "$schema": "rulealize/state/v1",
+        "ruleSet": "draw@1.0.0",
+        "data": {
+          "total": 36
+        }
+      },
+      "evaluated": 2,
+      "moves": [
+        {
+          "input": "roll",
+          "lands": [
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  1
+                ]
+              },
+              "to": "#37"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  2
+                ]
+              },
+              "to": "#38"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  3
+                ]
+              },
+              "to": "#39"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  4
+                ]
+              },
+              "to": "#40"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  5
+                ]
+              },
+              "to": "#41"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  6
+                ]
+              },
+              "to": "#42"
+            }
+          ]
+        },
+        {
+          "input": "stop",
+          "to": "#0"
+        }
+      ]
+    },
+    {
+      "name": "#37",
+      "from": "#36",
+      "by": "roll",
+      "state": {
+        "$schema": "rulealize/state/v1",
+        "ruleSet": "draw@1.0.0",
+        "data": {
+          "total": 37
+        }
+      },
+      "evaluated": 2,
+      "moves": [
+        {
+          "input": "roll",
+          "lands": [
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  1
+                ]
+              },
+              "to": "#38"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  2
+                ]
+              },
+              "to": "#39"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  3
+                ]
+              },
+              "to": "#40"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  4
+                ]
+              },
+              "to": "#41"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  5
+                ]
+              },
+              "to": "#42"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  6
+                ]
+              },
+              "to": "#43"
+            }
+          ]
+        },
+        {
+          "input": "stop",
+          "to": "#0"
+        }
+      ]
+    },
+    {
+      "name": "#38",
+      "from": "#37",
+      "by": "roll",
+      "state": {
+        "$schema": "rulealize/state/v1",
+        "ruleSet": "draw@1.0.0",
+        "data": {
+          "total": 38
+        }
+      },
+      "evaluated": 2,
+      "moves": [
+        {
+          "input": "roll",
+          "lands": [
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  1
+                ]
+              },
+              "to": "#39"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  2
+                ]
+              },
+              "to": "#40"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  3
+                ]
+              },
+              "to": "#41"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  4
+                ]
+              },
+              "to": "#42"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  5
+                ]
+              },
+              "to": "#43"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  6
+                ]
+              },
+              "to": "#44"
+            }
+          ]
+        },
+        {
+          "input": "stop",
+          "to": "#0"
+        }
+      ]
+    },
+    {
+      "name": "#39",
+      "from": "#38",
+      "by": "roll",
+      "state": {
+        "$schema": "rulealize/state/v1",
+        "ruleSet": "draw@1.0.0",
+        "data": {
+          "total": 39
+        }
+      },
+      "evaluated": 2,
+      "moves": [
+        {
+          "input": "roll",
+          "lands": [
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  1
+                ]
+              },
+              "to": "#40"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  2
+                ]
+              },
+              "to": "#41"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  3
+                ]
+              },
+              "to": "#42"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  4
+                ]
+              },
+              "to": "#43"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  5
+                ]
+              },
+              "to": "#44"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  6
+                ]
+              },
+              "to": "#45"
+            }
+          ]
+        },
+        {
+          "input": "stop",
+          "to": "#0"
+        }
+      ]
+    },
+    {
+      "name": "#40",
+      "from": "#39",
+      "by": "roll",
+      "state": {
+        "$schema": "rulealize/state/v1",
+        "ruleSet": "draw@1.0.0",
+        "data": {
+          "total": 40
+        }
+      },
+      "evaluated": 2,
+      "moves": [
+        {
+          "input": "roll",
+          "lands": [
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  1
+                ]
+              },
+              "to": "#41"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  2
+                ]
+              },
+              "to": "#42"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  3
+                ]
+              },
+              "to": "#43"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  4
+                ]
+              },
+              "to": "#44"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  5
+                ]
+              },
+              "to": "#45"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  6
+                ]
+              },
+              "to": "#46"
+            }
+          ]
+        },
+        {
+          "input": "stop",
+          "to": "#0"
+        }
+      ]
+    },
+    {
+      "name": "#41",
+      "from": "#40",
+      "by": "roll",
+      "state": {
+        "$schema": "rulealize/state/v1",
+        "ruleSet": "draw@1.0.0",
+        "data": {
+          "total": 41
+        }
+      },
+      "evaluated": 2,
+      "moves": [
+        {
+          "input": "roll",
+          "lands": [
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  1
+                ]
+              },
+              "to": "#42"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  2
+                ]
+              },
+              "to": "#43"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  3
+                ]
+              },
+              "to": "#44"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  4
+                ]
+              },
+              "to": "#45"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  5
+                ]
+              },
+              "to": "#46"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  6
+                ]
+              },
+              "to": "#47"
+            }
+          ]
+        },
+        {
+          "input": "stop",
+          "to": "#0"
+        }
+      ]
+    },
+    {
+      "name": "#42",
+      "from": "#41",
+      "by": "roll",
+      "state": {
+        "$schema": "rulealize/state/v1",
+        "ruleSet": "draw@1.0.0",
+        "data": {
+          "total": 42
+        }
+      },
+      "evaluated": 2,
+      "moves": [
+        {
+          "input": "roll",
+          "lands": [
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  1
+                ]
+              },
+              "to": "#43"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  2
+                ]
+              },
+              "to": "#44"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  3
+                ]
+              },
+              "to": "#45"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  4
+                ]
+              },
+              "to": "#46"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  5
+                ]
+              },
+              "to": "#47"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  6
+                ]
+              },
+              "to": "#48"
+            }
+          ]
+        },
+        {
+          "input": "stop",
+          "to": "#0"
+        }
+      ]
+    },
+    {
+      "name": "#43",
+      "from": "#42",
+      "by": "roll",
+      "state": {
+        "$schema": "rulealize/state/v1",
+        "ruleSet": "draw@1.0.0",
+        "data": {
+          "total": 43
+        }
+      },
+      "evaluated": 2,
+      "moves": [
+        {
+          "input": "roll",
+          "lands": [
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  1
+                ]
+              },
+              "to": "#44"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  2
+                ]
+              },
+              "to": "#45"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  3
+                ]
+              },
+              "to": "#46"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  4
+                ]
+              },
+              "to": "#47"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  5
+                ]
+              },
+              "to": "#48"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  6
+                ]
+              },
+              "to": "#49"
+            }
+          ]
+        },
+        {
+          "input": "stop",
+          "to": "#0"
+        }
+      ]
+    },
+    {
+      "name": "#44",
+      "from": "#43",
+      "by": "roll",
+      "state": {
+        "$schema": "rulealize/state/v1",
+        "ruleSet": "draw@1.0.0",
+        "data": {
+          "total": 44
+        }
+      },
+      "evaluated": 2,
+      "moves": [
+        {
+          "input": "roll",
+          "lands": [
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  1
+                ]
+              },
+              "to": "#45"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  2
+                ]
+              },
+              "to": "#46"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  3
+                ]
+              },
+              "to": "#47"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  4
+                ]
+              },
+              "to": "#48"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  5
+                ]
+              },
+              "to": "#49"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  6
+                ]
+              },
+              "to": "#50"
+            }
+          ]
+        },
+        {
+          "input": "stop",
+          "to": "#0"
+        }
+      ]
+    },
+    {
+      "name": "#45",
+      "from": "#44",
+      "by": "roll",
+      "state": {
+        "$schema": "rulealize/state/v1",
+        "ruleSet": "draw@1.0.0",
+        "data": {
+          "total": 45
+        }
+      },
+      "evaluated": 2,
+      "moves": [
+        {
+          "input": "roll",
+          "lands": [
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  1
+                ]
+              },
+              "to": "#46"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  2
+                ]
+              },
+              "to": "#47"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  3
+                ]
+              },
+              "to": "#48"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  4
+                ]
+              },
+              "to": "#49"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  5
+                ]
+              },
+              "to": "#50"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  6
+                ]
+              },
+              "to": "#51"
+            }
+          ]
+        },
+        {
+          "input": "stop",
+          "to": "#0"
+        }
+      ]
+    },
+    {
+      "name": "#46",
+      "from": "#45",
+      "by": "roll",
+      "state": {
+        "$schema": "rulealize/state/v1",
+        "ruleSet": "draw@1.0.0",
+        "data": {
+          "total": 46
+        }
+      },
+      "evaluated": 2,
+      "moves": [
+        {
+          "input": "roll",
+          "lands": [
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  1
+                ]
+              },
+              "to": "#47"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  2
+                ]
+              },
+              "to": "#48"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  3
+                ]
+              },
+              "to": "#49"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  4
+                ]
+              },
+              "to": "#50"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  5
+                ]
+              },
+              "to": "#51"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  6
+                ]
+              },
+              "to": "#52"
+            }
+          ]
+        },
+        {
+          "input": "stop",
+          "to": "#0"
+        }
+      ]
+    },
+    {
+      "name": "#47",
+      "from": "#46",
+      "by": "roll",
+      "state": {
+        "$schema": "rulealize/state/v1",
+        "ruleSet": "draw@1.0.0",
+        "data": {
+          "total": 47
+        }
+      },
+      "evaluated": 2,
+      "moves": [
+        {
+          "input": "roll",
+          "lands": [
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  1
+                ]
+              },
+              "to": "#48"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  2
+                ]
+              },
+              "to": "#49"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  3
+                ]
+              },
+              "to": "#50"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  4
+                ]
+              },
+              "to": "#51"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  5
+                ]
+              },
+              "to": "#52"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  6
+                ]
+              },
+              "to": "#53"
+            }
+          ]
+        },
+        {
+          "input": "stop",
+          "to": "#0"
+        }
+      ]
+    },
+    {
+      "name": "#48",
+      "from": "#47",
+      "by": "roll",
+      "state": {
+        "$schema": "rulealize/state/v1",
+        "ruleSet": "draw@1.0.0",
+        "data": {
+          "total": 48
+        }
+      },
+      "evaluated": 2,
+      "moves": [
+        {
+          "input": "roll",
+          "lands": [
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  1
+                ]
+              },
+              "to": "#49"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  2
+                ]
+              },
+              "to": "#50"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  3
+                ]
+              },
+              "to": "#51"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  4
+                ]
+              },
+              "to": "#52"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  5
+                ]
+              },
+              "to": "#53"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  6
+                ]
+              },
+              "to": "#54"
+            }
+          ]
+        },
+        {
+          "input": "stop",
+          "to": "#0"
+        }
+      ]
+    },
+    {
+      "name": "#49",
+      "from": "#48",
+      "by": "roll",
+      "state": {
+        "$schema": "rulealize/state/v1",
+        "ruleSet": "draw@1.0.0",
+        "data": {
+          "total": 49
+        }
+      },
+      "evaluated": 2,
+      "moves": [
+        {
+          "input": "roll",
+          "lands": [
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  1
+                ]
+              },
+              "to": "#50"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  2
+                ]
+              },
+              "to": "#51"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  3
+                ]
+              },
+              "to": "#52"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  4
+                ]
+              },
+              "to": "#53"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  5
+                ]
+              },
+              "to": "#54"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  6
+                ]
+              },
+              "to": "#55"
+            }
+          ]
+        },
+        {
+          "input": "stop",
+          "to": "#0"
+        }
+      ]
+    },
+    {
+      "name": "#50",
+      "from": "#49",
+      "by": "roll",
+      "state": {
+        "$schema": "rulealize/state/v1",
+        "ruleSet": "draw@1.0.0",
+        "data": {
+          "total": 50
+        }
+      },
+      "evaluated": 2,
+      "moves": [
+        {
+          "input": "roll",
+          "lands": [
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  1
+                ]
+              },
+              "to": "#51"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  2
+                ]
+              },
+              "to": "#52"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  3
+                ]
+              },
+              "to": "#53"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  4
+                ]
+              },
+              "to": "#54"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  5
+                ]
+              },
+              "to": "#55"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  6
+                ]
+              },
+              "to": "#56"
+            }
+          ]
+        },
+        {
+          "input": "stop",
+          "to": "#0"
+        }
+      ]
+    },
+    {
+      "name": "#51",
+      "from": "#50",
+      "by": "roll",
+      "state": {
+        "$schema": "rulealize/state/v1",
+        "ruleSet": "draw@1.0.0",
+        "data": {
+          "total": 51
+        }
+      },
+      "evaluated": 2,
+      "moves": [
+        {
+          "input": "roll",
+          "lands": [
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  1
+                ]
+              },
+              "to": "#52"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  2
+                ]
+              },
+              "to": "#53"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  3
+                ]
+              },
+              "to": "#54"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  4
+                ]
+              },
+              "to": "#55"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  5
+                ]
+              },
+              "to": "#56"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  6
+                ]
+              },
+              "to": "#57"
+            }
+          ]
+        },
+        {
+          "input": "stop",
+          "to": "#0"
+        }
+      ]
+    },
+    {
+      "name": "#52",
+      "from": "#51",
+      "by": "roll",
+      "state": {
+        "$schema": "rulealize/state/v1",
+        "ruleSet": "draw@1.0.0",
+        "data": {
+          "total": 52
+        }
+      },
+      "evaluated": 2,
+      "moves": [
+        {
+          "input": "roll",
+          "lands": [
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  1
+                ]
+              },
+              "to": "#53"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  2
+                ]
+              },
+              "to": "#54"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  3
+                ]
+              },
+              "to": "#55"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  4
+                ]
+              },
+              "to": "#56"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  5
+                ]
+              },
+              "to": "#57"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  6
+                ]
+              },
+              "to": "#58"
+            }
+          ]
+        },
+        {
+          "input": "stop",
+          "to": "#0"
+        }
+      ]
+    },
+    {
+      "name": "#53",
+      "from": "#52",
+      "by": "roll",
+      "state": {
+        "$schema": "rulealize/state/v1",
+        "ruleSet": "draw@1.0.0",
+        "data": {
+          "total": 53
+        }
+      },
+      "evaluated": 2,
+      "moves": [
+        {
+          "input": "roll",
+          "lands": [
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  1
+                ]
+              },
+              "to": "#54"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  2
+                ]
+              },
+              "to": "#55"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  3
+                ]
+              },
+              "to": "#56"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  4
+                ]
+              },
+              "to": "#57"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  5
+                ]
+              },
+              "to": "#58"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  6
+                ]
+              },
+              "to": "#59"
+            }
+          ]
+        },
+        {
+          "input": "stop",
+          "to": "#0"
+        }
+      ]
+    },
+    {
+      "name": "#54",
+      "from": "#53",
+      "by": "roll",
+      "state": {
+        "$schema": "rulealize/state/v1",
+        "ruleSet": "draw@1.0.0",
+        "data": {
+          "total": 54
+        }
+      },
+      "evaluated": 2,
+      "moves": [
+        {
+          "input": "roll",
+          "lands": [
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  1
+                ]
+              },
+              "to": "#55"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  2
+                ]
+              },
+              "to": "#56"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  3
+                ]
+              },
+              "to": "#57"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  4
+                ]
+              },
+              "to": "#58"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  5
+                ]
+              },
+              "to": "#59"
+            },
+            {
+              "probability": 0.16666666666666669,
+              "drew": {
+                "$schema": "rulealize/outcome/v1",
+                "ruleSet": "draw@1.0.0",
+                "input": "roll",
+                "draws": [
+                  6
+                ]
+              },
+              "to": "#60"
+            }
+          ]
+        },
+        {
+          "input": "stop",
+          "to": "#0"
+        }
+      ]
+    },
+    {
+      "name": "#55",
+      "from": "#54",
+      "by": "roll",
+      "state": {
+        "$schema": "rulealize/state/v1",
+        "ruleSet": "draw@1.0.0",
+        "data": {
+          "total": 55
+        }
+      },
+      "evaluated": 2,
+      "moves": [
+        {
+          "input": "stop",
+          "to": "#0"
+        }
+      ]
+    },
+    {
+      "name": "#56",
+      "from": "#54",
+      "by": "roll",
+      "state": {
+        "$schema": "rulealize/state/v1",
+        "ruleSet": "draw@1.0.0",
+        "data": {
+          "total": 56
+        }
+      },
+      "evaluated": 2,
+      "moves": [
+        {
+          "input": "stop",
+          "to": "#0"
+        }
+      ]
+    },
+    {
+      "name": "#57",
+      "from": "#54",
+      "by": "roll",
+      "state": {
+        "$schema": "rulealize/state/v1",
+        "ruleSet": "draw@1.0.0",
+        "data": {
+          "total": 57
+        }
+      },
+      "evaluated": 2,
+      "moves": [
+        {
+          "input": "stop",
+          "to": "#0"
+        }
+      ]
+    },
+    {
+      "name": "#58",
+      "from": "#54",
+      "by": "roll",
+      "state": {
+        "$schema": "rulealize/state/v1",
+        "ruleSet": "draw@1.0.0",
+        "data": {
+          "total": 58
+        }
+      },
+      "evaluated": 2,
+      "moves": [
+        {
+          "input": "stop",
+          "to": "#0"
+        }
+      ]
+    },
+    {
+      "name": "#59",
+      "from": "#54",
+      "by": "roll",
+      "state": {
+        "$schema": "rulealize/state/v1",
+        "ruleSet": "draw@1.0.0",
+        "data": {
+          "total": 59
+        }
+      },
+      "evaluated": 2,
+      "moves": [
+        {
+          "input": "stop",
+          "to": "#0"
+        }
+      ]
+    },
+    {
+      "name": "#60",
+      "from": "#54",
+      "by": "roll",
+      "state": {
+        "$schema": "rulealize/state/v1",
+        "ruleSet": "draw@1.0.0",
+        "data": {
+          "total": 60
+        }
+      },
+      "evaluated": 2,
+      "moves": [
+        {
+          "input": "stop",
+          "to": "#0"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+<Project>
+
+  <!-- The model lands in the application's namespace, which the generator reads as RootNamespace. -->
+  <ItemGroup>
+    <CompilerVisibleProperty Include="RootNamespace" />
+  </ItemGroup>
+
+  <!--
+    The label documents beside the rule set, one per language: signup.labels.en.json for
+    signup.json. They are the application's sentences for what its rules refuse with a code, and
+    found by their names, so an application lists only its rule set.
+  -->
+  <ItemGroup>
+    <AdditionalFiles Include="$(MSBuildProjectDirectory)\*.labels.*.json" />
+  </ItemGroup>
+
+  <!--
+    The application's windows, for the one thing compiling their XAML drops: the model each binds,
+    its x:DataType, written into the assembly beside the file's name, which is said from the
+    project's folder.
+  -->
+  <ItemGroup>
+    <CompilerVisibleProperty Include="MSBuildProjectDirectory" />
+    <AdditionalFiles Include="$(MSBuildProjectDirectory)\**\*.axaml" Exclude="$(MSBuildProjectDirectory)\bin\**;$(MSBuildProjectDirectory)\obj\**" />
+  </ItemGroup>
+
+</Project>

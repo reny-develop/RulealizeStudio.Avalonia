@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <RootNamespace>RulealizeStudio.Sample.Signup</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <AdditionalFiles Include="signup.json" />
+  </ItemGroup>
+
+  <!-- What signup.json requires. The rules ship with the binary, and the model sweeps the folder it is in. -->
+  <ItemGroup>
+    <PackageReference Include="Rulealize.Plugin.TypeSchema" Version="1.2.0" />
+    <PackageReference Include="Rulealize.Plugin.State" Version="1.0.1" />
+    <PackageReference Include="Rulealize.Plugin.Comparison" Version="1.0.1" />
+    <PackageReference Include="Rulealize.Plugin.Logic" Version="1.0.1" />
+    <PackageReference Include="Rulealize.Plugin.Sequence" Version="1.4.0" />
+    <PackageReference Include="Rulealize.Plugin.Binding" Version="1.0.1" />
+    <PackageReference Include="Rulealize.Plugin.Definition" Version="1.0.1" />
+  </ItemGroup>
+
+</Project>

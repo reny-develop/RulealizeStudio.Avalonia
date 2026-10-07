@@ -1,0 +1,4 @@
+# The tests write what a document should be as C# raw strings, which take the line endings of the
+# file they are written in, and compare it with text written with \n. So their sources are LF
+# wherever they are checked out.
+test/**/*.cs text eol=lf

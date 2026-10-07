@@ -1,0 +1,17 @@
+<Project>
+
+  <!--
+    What the packages an application is built from have in common: Binding, Hosting and
+    Generator, which an application made by the rulealize-avalonia-app template references by
+    these versions, and the server, which it runs as the local tool rulealize-studio to check
+    itself with. Packing writes them to feed/ at the root of this repository, which the extension
+    hands the template while they are not on nuget.org.
+  -->
+  <PropertyGroup>
+    <Version>0.4.0</Version>
+    <Authors>Reny</Authors>
+    <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
+    <PackageOutputPath>$(MSBuildThisFileDirectory)..\feed</PackageOutputPath>
+  </PropertyGroup>
+
+</Project>

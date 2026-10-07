@@ -1,0 +1,18 @@
+<!--
+  The window an order is confirmed on: shown while the rules offer change, which is while it is
+  being confirmed, and its × is change, which hides it again.
+-->
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:m="using:RulealizeStudio.Tests"
+        xmlns:rs="using:RulealizeStudio.Hosting"
+        x:DataType="m:OrderModel"
+        rs:RuleWindow.ShowWhen="{Binding Change.IsOffered}"
+        rs:RuleWindow.CloseWith="{Binding Change.Apply}"
+        Title="Confirm"
+        Width="320" Height="160">
+  <StackPanel Margin="16" Spacing="8">
+    <TextBlock x:Name="Asked" Text="{Binding State.Count}" />
+    <Button x:Name="Place" Content="Place" Command="{Binding Place.Apply}" />
+  </StackPanel>
+</Window>

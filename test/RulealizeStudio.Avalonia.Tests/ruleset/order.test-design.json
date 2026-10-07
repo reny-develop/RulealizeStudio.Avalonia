@@ -1,0 +1,172 @@
+{
+  "$schema": "ruledger/test-design/v2",
+  "ruleSet": "order@1.0.0",
+  "settings": {
+    "states": 3000,
+    "candidates": 10000,
+    "outcomes": 64
+  },
+  "observed": [
+    "count",
+    "confirming",
+    "placed"
+  ],
+  "collapsed": [],
+  "unreached": 0,
+  "edits": [],
+  "states": [
+    {
+      "name": "#0",
+      "state": {
+        "$schema": "rulealize/state/v1",
+        "ruleSet": "order@1.0.0",
+        "data": {
+          "count": 0,
+          "confirming": false,
+          "placed": false
+        }
+      },
+      "evaluated": 4,
+      "moves": [
+        {
+          "input": "add",
+          "to": "#1"
+        }
+      ]
+    },
+    {
+      "name": "#1",
+      "from": "#0",
+      "by": "add",
+      "state": {
+        "$schema": "rulealize/state/v1",
+        "ruleSet": "order@1.0.0",
+        "data": {
+          "count": 1,
+          "confirming": false,
+          "placed": false
+        }
+      },
+      "evaluated": 4,
+      "moves": [
+        {
+          "input": "add",
+          "to": "#2"
+        },
+        {
+          "input": "review",
+          "to": "#5"
+        }
+      ]
+    },
+    {
+      "name": "#2",
+      "from": "#1",
+      "by": "add",
+      "state": {
+        "$schema": "rulealize/state/v1",
+        "ruleSet": "order@1.0.0",
+        "data": {
+          "count": 2,
+          "confirming": false,
+          "placed": false
+        }
+      },
+      "evaluated": 4,
+      "moves": [
+        {
+          "input": "review",
+          "to": "#3"
+        }
+      ]
+    },
+    {
+      "name": "#3",
+      "from": "#2",
+      "by": "review",
+      "state": {
+        "$schema": "rulealize/state/v1",
+        "ruleSet": "order@1.0.0",
+        "data": {
+          "count": 2,
+          "confirming": true,
+          "placed": false
+        }
+      },
+      "evaluated": 4,
+      "moves": [
+        {
+          "input": "change",
+          "to": "#2"
+        },
+        {
+          "input": "place",
+          "to": "#4"
+        }
+      ]
+    },
+    {
+      "name": "#4",
+      "from": "#3",
+      "by": "place",
+      "state": {
+        "$schema": "rulealize/state/v1",
+        "ruleSet": "order@1.0.0",
+        "data": {
+          "count": 2,
+          "confirming": true,
+          "placed": true
+        }
+      },
+      "evaluated": 4,
+      "terminal": {
+        "result": "placed"
+      },
+      "moves": []
+    },
+    {
+      "name": "#5",
+      "from": "#1",
+      "by": "review",
+      "state": {
+        "$schema": "rulealize/state/v1",
+        "ruleSet": "order@1.0.0",
+        "data": {
+          "count": 1,
+          "confirming": true,
+          "placed": false
+        }
+      },
+      "evaluated": 4,
+      "moves": [
+        {
+          "input": "change",
+          "to": "#1"
+        },
+        {
+          "input": "place",
+          "to": "#6"
+        }
+      ]
+    },
+    {
+      "name": "#6",
+      "from": "#5",
+      "by": "place",
+      "state": {
+        "$schema": "rulealize/state/v1",
+        "ruleSet": "order@1.0.0",
+        "data": {
+          "count": 1,
+          "confirming": true,
+          "placed": true
+        }
+      },
+      "evaluated": 4,
+      "terminal": {
+        "result": "placed"
+      },
+      "moves": []
+    }
+  ]
+}

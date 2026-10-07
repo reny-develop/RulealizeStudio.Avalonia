@@ -1,0 +1,74 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!--
+    What the VS Code extension asks about a rule set, answered by the Rulealize this repository
+    already takes rather than by anything written in TypeScript. A language server on standard
+    input and output: whether a rule set compiles against a folder of vocabularies, the rules it
+    has and what a specification has, what a screen's XAML asks a rule set to give, how a value somebody chose
+    to try is written into a test design, and what changed of the specification and the screen
+    beyond binding them to the rules.
+
+    The same program is the command line an application's folder is checked with — whether its
+    rule set compiles, whether its specification and rules agree, whether its screen does what its test
+    design says — so that what an agent is told to run is what the editor runs. And what the
+    editor runs to show a situation of the test design as the application's window: show; and what
+    a change to the rules did to the design, as Ruledger's diff answers it: changes. And what the
+    editor runs while a screen is designed on its own window: design. An application
+    reaches it as a local tool, rulealize-studio, which packing writes to feed/ beside the libraries
+    while none of them is on nuget.org.
+  -->
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <RootNamespace>RulealizeStudio.Server</RootNamespace>
+    <PackAsTool>true</PackAsTool>
+    <ToolCommandName>rulealize-studio</ToolCommandName>
+    <Description>What the RulealizeStudio.Avalonia extension asks about a rule set, a screen and a specification, as a language server; and the same questions from an application's folder: rulealize-studio check, agree and replay; show, a situation of the test design as pictures of the application's window; changes, what a change to the rules did to the test design; and design, the screen drawn from its XAML as written and changed by edits to the text.</Description>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <WarningsAsErrors>$(WarningsAsErrors);NU1605;CS1591</WarningsAsErrors>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Rulealize" Version="0.12.0" />
+  </ItemGroup>
+
+  <!--
+    What a screen asks of a rule set is told apart from what the model has of its own by the
+    binding layer's members, and a rule set's name is matched to the one XAML binds the way the
+    generator makes it: by the generator's own code, compiled here too rather than written twice.
+  -->
+  <ItemGroup>
+    <ProjectReference Include="..\RulealizeStudio.Binding\RulealizeStudio.Binding.csproj" />
+    <Compile Include="..\RulealizeStudio.Generator\Name.cs" Link="Name.cs" />
+  </ItemGroup>
+
+  <!--
+    The replay stands an application's screen in each state its test design names, and presses the
+    controls, with no window server: the hosting library's Replay, on Avalonia's headless platform.
+    Showing a situation draws the window there with Skia, as the application draws itself, and
+    takes a picture of it. Designing the screen loads its XAML as it is written now, at run time,
+    since nothing is built for each change.
+  -->
+  <ItemGroup>
+    <ProjectReference Include="..\RulealizeStudio.Hosting\RulealizeStudio.Hosting.csproj" />
+    <PackageReference Include="Avalonia.Headless" Version="11.3.11" />
+    <PackageReference Include="Avalonia.Skia" Version="11.3.11" />
+    <PackageReference Include="Avalonia.Markup.Xaml.Loader" Version="11.3.11" />
+  </ItemGroup>
+
+  <!--
+    What a change to the rules did is Ruledger's account: its diff, asked for as values and said
+    here by the routes that reach each situation it names, never worked out here from two designs.
+    The design itself still reaches an application as the file the walk writes, committed beside
+    its rule set; this is the walk and the diff, called where they are needed.
+  -->
+  <ItemGroup>
+    <PackageReference Include="Ruledger" Version="1.1.0" />
+  </ItemGroup>
+
+</Project>

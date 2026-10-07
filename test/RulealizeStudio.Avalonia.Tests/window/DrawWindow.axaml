@@ -1,0 +1,21 @@
+<!-- A window of another rule set in the same application, shown from the start beside the order. -->
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:m="using:RulealizeStudio.Tests"
+        xmlns:b="using:RulealizeStudio.Binding"
+        x:DataType="m:DrawModel"
+        Title="Draw"
+        Width="320" Height="160">
+  <StackPanel Margin="16" Spacing="8">
+    <TextBlock x:Name="Total" Text="{Binding State.Total}" />
+    <Button x:Name="Roll" Content="Roll" Command="{Binding Roll.Apply}" />
+    <Button x:Name="Stop" Content="Stop" Command="{Binding Stop.Apply}" />
+    <ItemsControl ItemsSource="{Binding Outcomes}">
+      <ItemsControl.ItemTemplate>
+        <DataTemplate x:DataType="b:OutcomeChoice">
+          <Button Content="{Binding Draws}" Command="{Binding Choose}" />
+        </DataTemplate>
+      </ItemsControl.ItemTemplate>
+    </ItemsControl>
+  </StackPanel>
+</Window>

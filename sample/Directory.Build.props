@@ -1,0 +1,49 @@
+<Project>
+
+  <!--
+    What every application made of a rule set and XAML has in common, so that each one's own
+    project says only which rule set it is and which vocabularies that rule set requires.
+
+    The generator reads the application's rule set, listed as AdditionalFiles, and writes the
+    model its XAML binds to; RootNamespace is made visible to it so the model lands in the
+    application's namespace. The hosting library is what the entry point calls.
+  -->
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <BuiltInComInteropSupport>true</BuiltInComInteropSupport>
+    <AvaloniaUseCompiledBindingsByDefault>true</AvaloniaUseCompiledBindingsByDefault>
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <CompilerVisibleProperty Include="RootNamespace" />
+  </ItemGroup>
+
+  <!-- As the generator's package brings them: the label documents beside the rule set, found by their names. -->
+  <ItemGroup>
+    <AdditionalFiles Include="$(MSBuildProjectDirectory)\*.labels.*.json" />
+  </ItemGroup>
+
+  <!-- As the generator's package brings them too: the windows, for the model each binds. -->
+  <ItemGroup>
+    <CompilerVisibleProperty Include="MSBuildProjectDirectory" />
+    <AdditionalFiles Include="$(MSBuildProjectDirectory)\**\*.axaml" Exclude="$(MSBuildProjectDirectory)\bin\**;$(MSBuildProjectDirectory)\obj\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Avalonia" Version="11.3.11" />
+    <PackageReference Include="Avalonia.Desktop" Version="11.3.11" />
+    <PackageReference Include="Avalonia.Themes.Fluent" Version="11.3.11" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="$(MSBuildThisFileDirectory)..\src\RulealizeStudio.Binding\RulealizeStudio.Binding.csproj" />
+    <ProjectReference Include="$(MSBuildThisFileDirectory)..\src\RulealizeStudio.Hosting\RulealizeStudio.Hosting.csproj" />
+    <ProjectReference Include="$(MSBuildThisFileDirectory)..\src\RulealizeStudio.Generator\RulealizeStudio.Generator.csproj"
+                      OutputItemType="Analyzer" ReferenceOutputAssembly="false" />
+  </ItemGroup>
+
+</Project>

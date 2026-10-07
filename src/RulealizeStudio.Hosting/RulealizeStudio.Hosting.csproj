@@ -1,0 +1,31 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!--
+    What an application's entry point calls, so that the entry point is the only C# it has: an
+    Avalonia application that opens every window compiled into the application's assembly, each
+    on the model generated from the rule set it binds, shown while the rules say.
+  -->
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <RootNamespace>RulealizeStudio.Hosting</RootNamespace>
+    <Description>What the entry point of an Avalonia application made of rule sets and XAML calls: it opens every window of the application on the model generated from the rule set it binds, and shows each while the rules say. Also Reach and Replay, which walk a Ruledger test design on the windows.</Description>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <WarningsAsErrors>$(WarningsAsErrors);NU1605;CS1591</WarningsAsErrors>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Avalonia" Version="11.3.11" />
+    <PackageReference Include="Avalonia.Desktop" Version="11.3.11" />
+    <PackageReference Include="Avalonia.Themes.Fluent" Version="11.3.11" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\RulealizeStudio.Binding\RulealizeStudio.Binding.csproj" />
+  </ItemGroup>
+
+</Project>

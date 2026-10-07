@@ -1,0 +1,13 @@
+bin/
+obj/
+.vs/
+*.user
+node_modules/
+out/
+.vscode-test/
+feed/
+editor/vscode/server/
+editor/vscode/example/
+*.vsix
+editor/vscode/LICENSE
+editor/vscode/THIRD-PARTY-NOTICES.txt

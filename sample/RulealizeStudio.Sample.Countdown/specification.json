@@ -1,0 +1,53 @@
+{
+  "$schema": "rulealize-studio/state-machine/v1",
+  "initial": "counting",
+  "states": {
+    "counting": {
+      "name": "Counting",
+      "says": "The count starts at nothing and is never more than ten.",
+      "rules": [
+        "/state/schema/total"
+      ]
+    },
+    "done": {
+      "name": "Ten",
+      "final": true,
+      "says": "Reaching ten exactly is the end.",
+      "rules": [
+        "/terminal"
+      ]
+    }
+  },
+  "transitions": {
+    "step": {
+      "from": "counting",
+      "to": "counting",
+      "name": "Add one, two or three",
+      "says": "Each step adds one, two or three to the count.",
+      "rules": [
+        "/inputs/add",
+        "/inputs/add/params/n",
+        "/inputs/add/effects"
+      ]
+    },
+    "last-step": {
+      "from": "counting",
+      "to": "done",
+      "name": "Add one, two or three",
+      "guard": "it makes ten",
+      "says": "A step that makes the count exactly ten is the last one.",
+      "rules": [
+        "/inputs/add"
+      ]
+    }
+  },
+  "notes": {
+    "no-overshoot": {
+      "on": "step",
+      "says": "A step that would take the count past ten is not offered.",
+      "rules": [
+        "/inputs/add/when"
+      ]
+    }
+  }
+}

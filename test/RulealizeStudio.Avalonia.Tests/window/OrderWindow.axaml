@@ -1,0 +1,16 @@
+<!--
+  The window an order is put together on, shown from the start: it binds no ShowWhen. Its × makes
+  no move, so it cannot be closed while the order stands.
+-->
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:m="using:RulealizeStudio.Tests"
+        x:DataType="m:OrderModel"
+        Title="Order"
+        Width="320" Height="200">
+  <StackPanel Margin="16" Spacing="8">
+    <TextBlock x:Name="Count" Text="{Binding State.Count}" />
+    <Button x:Name="Add" Content="Add" Command="{Binding Add.Apply}" />
+    <Button x:Name="Review" Content="Review" Command="{Binding Review.Apply}" />
+  </StackPanel>
+</Window>

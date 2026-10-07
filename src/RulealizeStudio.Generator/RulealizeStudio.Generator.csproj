@@ -1,0 +1,49 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!--
+    Reads a rule set at build time and writes the types a screen binds to. It runs inside the
+    compiler, so it targets what the compiler loads and carries no dependency of its own: the
+    document is read by a JSON reader in this project rather than by one that would have to
+    travel with it.
+  -->
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <RootNamespace>RulealizeStudio.Generator</RootNamespace>
+    <Description>A source generator that reads an application's rule set at build time and writes the model its XAML binds to, named after the rule set's id.</Description>
+    <EnforceExtendedAnalyzerRules>true</EnforceExtendedAnalyzerRules>
+    <IsRoslynComponent>true</IsRoslynComponent>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <WarningsAsErrors>$(WarningsAsErrors);NU1605;CS1591</WarningsAsErrors>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <AdditionalFiles Include="AnalyzerReleases.Shipped.md" />
+    <AdditionalFiles Include="AnalyzerReleases.Unshipped.md" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.CodeAnalysis.CSharp" Version="5.0.0" PrivateAssets="all" />
+  </ItemGroup>
+
+  <!--
+    As a package it is an analyzer and nothing an application compiles against, and it brings
+    the one property it reads: RootNamespace, so the model lands in the application's namespace.
+  -->
+  <PropertyGroup>
+    <IncludeBuildOutput>false</IncludeBuildOutput>
+    <DevelopmentDependency>true</DevelopmentDependency>
+    <SuppressDependenciesWhenPacking>true</SuppressDependenciesWhenPacking>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="$(OutputPath)$(AssemblyName).dll" Pack="true" PackagePath="analyzers/dotnet/cs" Visible="false" />
+    <None Include="build\RulealizeStudio.Generator.props" Pack="true" PackagePath="build" />
+  </ItemGroup>
+
+</Project>

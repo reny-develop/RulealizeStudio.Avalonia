@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!--
+    What an application binds to, with no Avalonia in it. Change notification, a command per
+    input and errors per field are all System.ComponentModel, so the layer a screen binds to is
+    testable without a window, as Session is.
+  -->
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <RootNamespace>RulealizeStudio.Binding</RootNamespace>
+    <Description>What an application made of a rule set and XAML binds to: a model with change notification, back and forward and outcomes, a command per input enabled by GetValidInputs, and refusals as INotifyDataErrorInfo. No Avalonia in it.</Description>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <WarningsAsErrors>$(WarningsAsErrors);NU1605;CS1591</WarningsAsErrors>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Rulealize" Version="0.12.0" />
+  </ItemGroup>
+
+</Project>

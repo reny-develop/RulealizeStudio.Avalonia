@@ -1,0 +1,113 @@
+{
+  "$schema": "rulealize/ruleset/v1",
+  "id": "signup",
+  "version": "1.0.0",
+
+  "requires": [
+    { "plugin": "Rulealize.Plugin.TypeSchema", "version": "^1.1" },
+    { "plugin": "Rulealize.Plugin.State", "version": "^1.0" },
+    { "plugin": "Rulealize.Plugin.Comparison", "version": "^1.0" },
+    { "plugin": "Rulealize.Plugin.Logic", "version": "^1.0" },
+    { "plugin": "Rulealize.Plugin.Sequence", "version": "^1.0" },
+    { "plugin": "Rulealize.Plugin.Binding", "version": "^1.0" },
+    { "plugin": "Rulealize.Plugin.Definition", "version": "^1.0" }
+  ],
+
+  "state": {
+    "schema": {
+      "stage": { "op": "type.enum", "values": ["empty", "named", "booked"] },
+      "name": { "op": "type.string", "maxLength": 12 },
+      "party": { "op": "type.int", "min": 1, "max": 6 },
+      "seat": { "op": "type.enum", "values": ["window", "aisle"], "nullable": true },
+      "wants": { "op": "type.enum", "values": ["quiet", "near the door"], "nullable": true }
+    },
+    "initial": { "stage": "empty", "name": "", "party": 1, "seat": null, "wants": null }
+  },
+
+  "definitions": {
+
+    // The whole of what `book` waits for. Written once so that the guard and what the rule
+    // set says about the position cannot come to disagree: the button is on screen exactly
+    // when `booking.ready` is true, by construction rather than by anybody checking.
+    "ready": {
+      "op": "logic.and",
+      "all": [
+        { "op": "cmp.eq", "left": "$stage", "right": "named" },
+        { "op": "logic.not", "value": { "op": "cmp.isNull", "value": "$seat" } }
+      ]
+    }
+  },
+
+  "inputs": {
+    "setName": {
+      "params": { "to": { "open": { "field": "name" } } },
+      "when": { "op": "logic.not", "value": { "op": "cmp.eq", "left": "$stage", "right": "booked" } },
+      "validate": [
+        { "require": { "op": "logic.not", "value": { "op": "cmp.eq", "left": "@to", "right": "$name" } },
+          "code": "name.unchanged" },
+        { "require": { "op": "logic.not", "value": { "op": "cmp.eq", "left": "@to", "right": "admin" } },
+          "code": "name.reserved" }
+      ],
+      "effects": [
+        { "op": "state.set", "path": "name", "value": "@to" },
+        { "op": "state.set", "path": "stage", "value": "named" }
+      ]
+    },
+
+    "chooseSeat": {
+      "params": { "seat": { "domain": { "op": "seq.of", "of": ["window", "aisle"] } } },
+      "when": { "op": "cmp.eq", "left": "$stage", "right": "named" },
+      "effects": [ { "op": "state.set", "path": "seat", "value": "@seat" } ]
+    },
+
+    "setParty": {
+      "params": { "size": { "open": { "field": "party" } } },
+      "when": { "op": "cmp.eq", "left": "$stage", "right": "named" },
+      "validate": [
+        { "require": { "op": "logic.not", "value": { "op": "cmp.eq", "left": "@size", "right": "$party" } },
+          "code": "party.unchanged" }
+      ],
+      "effects": [ { "op": "state.set", "path": "party", "value": "@size" } ]
+    },
+
+    "note": {
+      "params": { "what": { "open": { "field": "wants" } } },
+      "when": { "op": "logic.and", "all": [
+        { "op": "cmp.eq", "left": "$stage", "right": "named" },
+        { "op": "cmp.isNull", "value": "$wants" }
+      ] },
+      "validate": [
+        { "require": { "op": "logic.or", "any": [
+            { "op": "logic.not", "value": { "op": "cmp.eq", "left": "@what", "right": "quiet" } },
+            { "op": "cmp.lte", "left": "$party", "right": 2 } ] },
+          "code": "wants.tooManyForQuiet" }
+      ],
+      "effects": [ { "op": "state.set", "path": "wants", "value": "@what" } ]
+    },
+
+    "book": {
+      "when": "#ready",
+      "effects": [ { "op": "state.set", "path": "stage", "value": "booked" } ]
+    }
+  },
+
+  "projections": {
+
+    // What a screen would want to know about a booking, said by the rules rather than worked
+    // out from the state document. `party` is a record assembled out of parts, which is what
+    // an object with no `op` in it already is; `ready` is the guard above, so nothing outside
+    // this document decides when a booking may be made.
+    "booking": {
+      "who":   "$name",
+      "stage": "$stage",
+      "seat":  "$seat",
+      "party": { "size": "$party", "wants": "$wants" },
+      "ready": "#ready"
+    }
+  },
+
+  "terminal": {
+    "when": { "op": "cmp.eq", "left": "$stage", "right": "booked" },
+    "result": "booked"
+  }
+}

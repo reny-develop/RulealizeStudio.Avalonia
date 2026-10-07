@@ -1,0 +1,36 @@
+{
+  "$schema": "rulealize/ruleset/v1",
+  "id": "draw",
+  "version": "1.0.0",
+
+  "requires": [
+    { "plugin": "Rulealize.Plugin.TypeSchema", "version": "^1.0" },
+    { "plugin": "Rulealize.Plugin.State", "version": "^1.0" },
+    { "plugin": "Rulealize.Plugin.Comparison", "version": "^1.0" },
+    { "plugin": "Rulealize.Plugin.Sequence", "version": "^1.4" },
+    { "plugin": "Rulealize.Plugin.Arithmetic", "version": "^1.0" },
+    { "plugin": "Rulealize.Plugin.Chance", "version": "^1.0" }
+  ],
+
+  "state": {
+    "schema": { "total": { "op": "type.int", "min": 0, "max": 60 } },
+    "initial": { "total": 0 }
+  },
+
+  "inputs": {
+    "roll": {
+      "when": { "op": "cmp.lte", "left": "$total", "right": 54 },
+      "effects": [
+        { "op": "state.set", "path": "total", "value": { "op": "math.add", "of": [
+          "$total",
+          { "op": "chance.pick", "of": { "op": "seq.range", "from": 1, "count": 6 } }
+        ] } }
+      ]
+    },
+
+    "stop": {
+      "when": { "op": "cmp.gt", "left": "$total", "right": 0 },
+      "effects": [ { "op": "state.set", "path": "total", "value": 0 } ]
+    }
+  }
+}

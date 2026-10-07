@@ -1,0 +1,13 @@
+{
+  "$schema": "rulealize-studio/labels/v1",
+
+  // What signup says, in English, where its rules refuse with a code: under the field the clause
+  // was about, in the review of the test design, and as what the design expects there. Each is
+  // keyed by the name the clause has in the specification.
+  "labels": {
+    "/inputs/setName/validate/name.unchanged": "That is already the name.",
+    "/inputs/setName/validate/name.reserved": "Nobody books under that name.",
+    "/inputs/setParty/validate/party.unchanged": "The party is already that size.",
+    "/inputs/note/validate/wants.tooManyForQuiet": "A quiet table is for two or fewer."
+  }
+}

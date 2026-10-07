@@ -1,0 +1,67 @@
+{
+  "$schema": "rulealize/ruleset/v1",
+  "id": "order",
+  "version": "1.0.0",
+
+  // An order put together on one window and confirmed on another, for the tests of an application
+  // of several windows. Which window is shown is nothing this document says: the confirming window
+  // binds whether `change` is legal, and its × is `change` too.
+
+  "requires": [
+    { "plugin": "Rulealize.Plugin.TypeSchema", "version": "^1.0" },
+    { "plugin": "Rulealize.Plugin.State", "version": "^1.0" },
+    { "plugin": "Rulealize.Plugin.Comparison", "version": "^1.0" },
+    { "plugin": "Rulealize.Plugin.Logic", "version": "^1.0" },
+    { "plugin": "Rulealize.Plugin.Arithmetic", "version": "^1.0" }
+  ],
+
+  "state": {
+    "schema": {
+      "count": { "op": "type.int", "min": 0, "max": 2 },
+      "confirming": { "op": "type.bool" },
+      "placed": { "op": "type.bool" }
+    },
+    "initial": { "count": 0, "confirming": false, "placed": false }
+  },
+
+  "inputs": {
+    "add": {
+      "when": { "op": "logic.and", "all": [
+        { "op": "cmp.eq", "left": "$confirming", "right": false },
+        { "op": "cmp.lte", "left": "$count", "right": 1 }
+      ] },
+      "effects": [
+        { "op": "state.set", "path": "count", "value": { "op": "math.add", "of": ["$count", 1] } }
+      ]
+    },
+
+    "review": {
+      "when": { "op": "logic.and", "all": [
+        { "op": "cmp.eq", "left": "$confirming", "right": false },
+        { "op": "cmp.gt", "left": "$count", "right": 0 }
+      ] },
+      "effects": [ { "op": "state.set", "path": "confirming", "value": true } ]
+    },
+
+    "change": {
+      "when": { "op": "logic.and", "all": [
+        { "op": "cmp.eq", "left": "$confirming", "right": true },
+        { "op": "cmp.eq", "left": "$placed", "right": false }
+      ] },
+      "effects": [ { "op": "state.set", "path": "confirming", "value": false } ]
+    },
+
+    "place": {
+      "when": { "op": "logic.and", "all": [
+        { "op": "cmp.eq", "left": "$confirming", "right": true },
+        { "op": "cmp.eq", "left": "$placed", "right": false }
+      ] },
+      "effects": [ { "op": "state.set", "path": "placed", "value": true } ]
+    }
+  },
+
+  "terminal": {
+    "when": { "op": "cmp.eq", "left": "$placed", "right": true },
+    "result": "placed"
+  }
+}

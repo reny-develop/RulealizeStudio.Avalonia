@@ -1,0 +1,314 @@
+{
+  "name": "rulealizestudio-avalonia",
+  "displayName": "RulealizeStudio.Avalonia",
+  "description": "%description%",
+  "version": "0.2.0",
+  "publisher": "reny-develop",
+  "icon": "media/icon.png",
+  "private": true,
+  "license": "Apache-2.0",
+  "engines": {
+    "vscode": "^1.90.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "main": "./out/extension.js",
+  "l10n": "./l10n",
+  "activationEvents": [
+    "onLanguage:json",
+    "onLanguage:jsonc",
+    "workspaceContains:**/*.axaml",
+    "workspaceContains:**/specification.json"
+  ],
+  "contributes": {
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "rulealizestudio",
+          "title": "RulealizeStudio.Avalonia",
+          "icon": "media/view.svg"
+        }
+      ]
+    },
+    "views": {
+      "rulealizestudio": [
+        {
+          "id": "rulealize.view",
+          "name": "%view.application.name%"
+        },
+        {
+          "id": "rulealize.walkthrough",
+          "name": "%view.walkthrough.name%",
+          "visibility": "collapsed"
+        }
+      ]
+    },
+    "viewsWelcome": [
+      {
+        "view": "rulealize.view",
+        "contents": "%viewsWelcome.noFolder%",
+        "when": "workspaceFolderCount == 0"
+      },
+      {
+        "view": "rulealize.view",
+        "contents": "%viewsWelcome.noApplication%",
+        "when": "workspaceFolderCount != 0"
+      },
+      {
+        "view": "rulealize.walkthrough",
+        "contents": "%viewsWelcome.walkthrough%"
+      }
+    ],
+    "commands": [
+      {
+        "command": "rulealize.screens",
+        "title": "%command.screens.title%",
+        "category": "%command.category%",
+        "icon": "$(device-desktop)"
+      },
+      {
+        "command": "rulealize.start",
+        "title": "%command.start.title%",
+        "category": "%command.category%"
+      },
+      {
+        "command": "rulealize.application",
+        "title": "%command.application.title%",
+        "category": "%command.category%"
+      },
+      {
+        "command": "rulealize.restore",
+        "title": "%command.restore.title%",
+        "category": "%command.category%"
+      },
+      {
+        "command": "rulealize.reveal",
+        "title": "%command.reveal.title%",
+        "category": "%command.category%"
+      },
+      {
+        "command": "rulealize.newWindow",
+        "title": "%command.newWindow.title%",
+        "category": "%command.category%",
+        "icon": "$(add)"
+      },
+      {
+        "command": "rulealize.newSpecification",
+        "title": "%command.newSpecification.title%",
+        "category": "%command.category%",
+        "icon": "$(add)"
+      },
+      {
+        "command": "rulealize.find",
+        "title": "%command.find.title%",
+        "category": "%command.category%",
+        "icon": "$(search)"
+      },
+      {
+        "command": "rulealize.delete",
+        "title": "%command.delete.title%",
+        "category": "%command.category%",
+        "icon": "$(trash)"
+      }
+    ],
+    "menus": {
+      "view/title": [
+        {
+          "command": "rulealize.find",
+          "when": "view == rulealize.view",
+          "group": "navigation"
+        }
+      ],
+      "view/item/context": [
+        {
+          "command": "rulealize.newWindow",
+          "when": "view == rulealize.view && viewItem == screens",
+          "group": "inline"
+        },
+        {
+          "command": "rulealize.newWindow",
+          "when": "view == rulealize.view && viewItem == screens",
+          "group": "1_new"
+        },
+        {
+          "command": "rulealize.newSpecification",
+          "when": "view == rulealize.view && viewItem == specifications",
+          "group": "inline"
+        },
+        {
+          "command": "rulealize.newSpecification",
+          "when": "view == rulealize.view && viewItem == specifications",
+          "group": "1_new"
+        },
+        {
+          "command": "rulealize.delete",
+          "when": "view == rulealize.view && viewItem =~ /^(window|specification)$/",
+          "group": "inline"
+        },
+        {
+          "command": "rulealize.delete",
+          "when": "view == rulealize.view && viewItem =~ /^(window|specification)$/",
+          "group": "7_modification"
+        }
+      ],
+      "commandPalette": [
+        {
+          "command": "rulealize.start",
+          "when": "false"
+        },
+        {
+          "command": "rulealize.reveal",
+          "when": "false"
+        },
+        {
+          "command": "rulealize.delete",
+          "when": "false"
+        },
+        {
+          "command": "rulealize.find",
+          "when": "false"
+        }
+      ]
+    },
+    "configuration": {
+      "title": "%configuration.title%",
+      "properties": {
+        "rulealize.plugins": {
+          "type": "string",
+          "default": "",
+          "scope": "window",
+          "description": "%configuration.plugins.description%"
+        },
+        "rulealize.server": {
+          "type": "string",
+          "default": "",
+          "description": "%configuration.server.description%"
+        },
+        "rulealize.feed": {
+          "type": "string",
+          "default": "",
+          "description": "%configuration.feed.description%"
+        },
+        "rulealize.ruledger": {
+          "type": "string",
+          "default": "",
+          "description": "%configuration.ruledger.description%"
+        },
+        "rulealize.rulealize": {
+          "type": "string",
+          "default": "",
+          "description": "%configuration.rulealize.description%"
+        }
+      }
+    },
+    "customEditors": [
+      {
+        "viewType": "rulealize.screen",
+        "displayName": "%customEditor.screen.displayName%",
+        "selector": [
+          {
+            "filenamePattern": "*.axaml"
+          }
+        ],
+        "priority": "default"
+      },
+      {
+        "viewType": "rulealize.specification",
+        "displayName": "%customEditor.specification.displayName%",
+        "selector": [
+          {
+            "filenamePattern": "specification.json"
+          },
+          {
+            "filenamePattern": "*.specification.json"
+          }
+        ],
+        "priority": "default"
+      }
+    ],
+    "walkthroughs": [
+      {
+        "id": "rules",
+        "title": "%walkthrough.rules.title%",
+        "description": "%walkthrough.rules.description%",
+        "steps": [
+          {
+            "id": "folder",
+            "title": "%walkthrough.rules.folder.title%",
+            "description": "%walkthrough.rules.folder.description%",
+            "media": {
+              "markdown": "%walkthrough.rules.folder.media%"
+            },
+            "completionEvents": [
+              "onContext:workspaceFolderCount != 0"
+            ]
+          },
+          {
+            "id": "start",
+            "title": "%walkthrough.rules.start.title%",
+            "description": "%walkthrough.rules.start.description%",
+            "media": {
+              "markdown": "%walkthrough.rules.start.media%"
+            },
+            "completionEvents": [
+              "onCommand:rulealize.start"
+            ]
+          },
+          {
+            "id": "screens",
+            "title": "%walkthrough.rules.screens.title%",
+            "description": "%walkthrough.rules.screens.description%",
+            "media": {
+              "markdown": "%walkthrough.rules.screens.media%"
+            },
+            "completionEvents": [
+              "onCommand:rulealize.screens"
+            ]
+          },
+          {
+            "id": "change",
+            "title": "%walkthrough.rules.change.title%",
+            "description": "%walkthrough.rules.change.description%",
+            "media": {
+              "markdown": "%walkthrough.rules.change.media%"
+            },
+            "completionEvents": [
+              "onContext:rulealize.diffed"
+            ]
+          },
+          {
+            "id": "own",
+            "title": "%walkthrough.rules.own.title%",
+            "description": "%walkthrough.rules.own.description%",
+            "media": {
+              "markdown": "%walkthrough.rules.own.media%"
+            },
+            "completionEvents": [
+              "onCommand:rulealize.application"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "scripts": {
+    "compile": "tsc -p .",
+    "watch": "tsc -watch -p .",
+    "vscode:prepublish": "npm run compile",
+    "package": "npm run compile && node pack.js",
+    "test": "npm run compile && node pack.js example && node ./out/test/run.js"
+  },
+  "dependencies": {
+    "vscode-languageclient": "^9.0.1"
+  },
+  "devDependencies": {
+    "@types/mocha": "^10.0.10",
+    "@types/node": "^20.0.0",
+    "@types/vscode": "^1.90.0",
+    "@vscode/test-electron": "^3.1.0",
+    "@vscode/vsce": "^4.0.0",
+    "mocha": "^12.0.2",
+    "typescript": "^5.6.0"
+  }
+}

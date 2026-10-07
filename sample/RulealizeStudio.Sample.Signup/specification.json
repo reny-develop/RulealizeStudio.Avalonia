@@ -1,0 +1,149 @@
+{
+  "$schema": "rulealize-studio/state-machine/v1",
+  "initial": "unnamed",
+  "states": {
+    "unnamed": {
+      "name": "Nobody named yet",
+      "says": "A booking starts with nobody named, a party of one, and no seat or wish.",
+      "rules": [
+        "/state/schema/stage"
+      ]
+    },
+    "named": {
+      "name": "Named",
+      "says": "Once there is a name, the seat, the party and a wish can be chosen, in any order.",
+      "rules": [
+        "/state/schema/stage"
+      ]
+    },
+    "booked": {
+      "name": "Booked",
+      "final": true,
+      "says": "Booking is the end of it: after that nothing can be changed.",
+      "rules": [
+        "/state/schema/stage",
+        "/inputs/setName/when",
+        "/terminal"
+      ]
+    }
+  },
+  "transitions": {
+    "name-first": {
+      "from": "unnamed",
+      "to": "named",
+      "name": "Give a name",
+      "says": "The person booking gives a name before anything else can be chosen.",
+      "rules": [
+        "/state/schema/name",
+        "/inputs/setName",
+        "/inputs/setName/params/to",
+        "/inputs/setName/effects"
+      ]
+    },
+    "rename": {
+      "from": "named",
+      "to": "named",
+      "name": "Change the name",
+      "says": "The name can be changed again, up to the moment the table is booked.",
+      "rules": [
+        "/inputs/setName/when"
+      ]
+    },
+    "seat": {
+      "from": "named",
+      "to": "named",
+      "name": "Choose a seat",
+      "says": "The person chooses a seat: by the window or on the aisle, offered as \"window\" and \"aisle\".",
+      "rules": [
+        "/state/schema/seat",
+        "/inputs/chooseSeat",
+        "/inputs/chooseSeat/params/seat",
+        "/inputs/chooseSeat/when",
+        "/inputs/chooseSeat/effects"
+      ]
+    },
+    "party-size": {
+      "from": "named",
+      "to": "named",
+      "name": "Set the party",
+      "says": "A party is one to six people, and one to start with.",
+      "rules": [
+        "/state/schema/party",
+        "/inputs/setParty",
+        "/inputs/setParty/params/size",
+        "/inputs/setParty/when",
+        "/inputs/setParty/effects"
+      ]
+    },
+    "wish": {
+      "from": "named",
+      "to": "named",
+      "name": "Say a wish",
+      "guard": "no wish yet",
+      "says": "The person may say once what they would like: a quiet table, or one near the door, offered as \"quiet\" and \"near the door\".",
+      "rules": [
+        "/state/schema/wants",
+        "/inputs/note",
+        "/inputs/note/params/what",
+        "/inputs/note/when",
+        "/inputs/note/effects"
+      ]
+    },
+    "ready": {
+      "from": "named",
+      "to": "booked",
+      "name": "Book",
+      "guard": "a name and a seat",
+      "says": "The table can be booked once there is a name and a seat.",
+      "rules": [
+        "/definitions/ready",
+        "/inputs/book",
+        "/inputs/book/when",
+        "/inputs/book/effects"
+      ]
+    }
+  },
+  "notes": {
+    "name-length": {
+      "on": "name-first",
+      "says": "A name is at most twelve characters, and nothing else is asked of it: even an empty one is taken.",
+      "rules": [
+        "/state/schema/name"
+      ]
+    },
+    "name-reserved": {
+      "on": "name-first",
+      "says": "\"admin\" is never a name somebody books under.",
+      "rules": [
+        "/inputs/setName/validate/name.reserved"
+      ]
+    },
+    "name-unchanged": {
+      "on": "rename",
+      "says": "Giving the name it already has is refused, since nothing would change.",
+      "rules": [
+        "/inputs/setName/validate/name.unchanged"
+      ]
+    },
+    "party-unchanged": {
+      "on": "party-size",
+      "says": "Setting the party to the size it already is is refused.",
+      "rules": [
+        "/inputs/setParty/validate/party.unchanged"
+      ]
+    },
+    "quiet-is-small": {
+      "on": "wish",
+      "says": "A quiet table can only be asked for by a party of two or fewer. The party is not held to it afterwards, and may still grow.",
+      "rules": [
+        "/inputs/note/validate/wants.tooManyForQuiet"
+      ]
+    },
+    "summary": {
+      "says": "The screen shows who is booking, the seat, the party and what they would like, and whether the table can be booked yet.",
+      "rules": [
+        "/projections/booking"
+      ]
+    }
+  }
+}

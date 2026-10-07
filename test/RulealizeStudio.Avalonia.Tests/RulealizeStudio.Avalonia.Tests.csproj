@@ -1,0 +1,91 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <IsPackable>false</IsPackable>
+    <RootNamespace>RulealizeStudio.Tests</RootNamespace>
+    <AvaloniaUseCompiledBindingsByDefault>true</AvaloniaUseCompiledBindingsByDefault>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.14.1" />
+    <PackageReference Include="xunit" Version="2.9.3" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="3.1.4" />
+    <PackageReference Include="Avalonia.Headless.XUnit" Version="11.3.11" />
+  </ItemGroup>
+
+  <!--
+    The vocabularies the documents below require, taken as ordinary package references. That
+    is the arrangement the Rulealize README calls the simpler one — the rules ship with the
+    binary — and it puts every assembly in this project's own output folder, which is then
+    what the sweep is pointed at. No plugin folder is built and no sibling repository is
+    read: a host consuming published packages is exactly what this program is.
+  -->
+  <ItemGroup>
+    <PackageReference Include="Rulealize.Plugin.TypeSchema" Version="1.2.0" />
+    <PackageReference Include="Rulealize.Plugin.State" Version="1.0.1" />
+    <PackageReference Include="Rulealize.Plugin.Comparison" Version="1.0.1" />
+    <PackageReference Include="Rulealize.Plugin.Logic" Version="1.0.1" />
+    <PackageReference Include="Rulealize.Plugin.Sequence" Version="1.4.0" />
+    <PackageReference Include="Rulealize.Plugin.Binding" Version="1.0.1" />
+    <PackageReference Include="Rulealize.Plugin.Arithmetic" Version="1.0.1" />
+    <PackageReference Include="Rulealize.Plugin.Chance" Version="1.1.0" />
+    <PackageReference Include="Rulealize.Plugin.Definition" Version="1.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Using Include="Xunit" />
+  </ItemGroup>
+
+  <!--
+    The libraries, the server, and the two applications made of a rule set and XAML. The
+    applications own their rule sets; the tests that need no application open the same documents,
+    linked into ruleset\ beside the one that belongs to no application.
+  -->
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\RulealizeStudio.Binding\RulealizeStudio.Binding.csproj" />
+    <ProjectReference Include="..\..\src\RulealizeStudio.Hosting\RulealizeStudio.Hosting.csproj" />
+    <ProjectReference Include="..\..\src\RulealizeStudio.Server\RulealizeStudio.Server.csproj" />
+    <ProjectReference Include="..\..\sample\RulealizeStudio.Sample.Signup\RulealizeStudio.Sample.Signup.csproj" />
+    <ProjectReference Include="..\..\sample\RulealizeStudio.Sample.Countdown\RulealizeStudio.Sample.Countdown.csproj" />
+    <ProjectReference Include="..\..\src\RulealizeStudio.Generator\RulealizeStudio.Generator.csproj"
+                      OutputItemType="Analyzer" ReferenceOutputAssembly="false" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="ruleset\*.json" CopyToOutputDirectory="PreserveNewest" />
+    <Content Include="..\..\sample\*\*.json" Exclude="..\..\sample\*\specification.json" Link="ruleset\%(Filename)%(Extension)" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+
+  <!-- Each application's specification, under its application's folder, since every one is called specification.json. -->
+  <ItemGroup>
+    <Content Include="..\..\sample\*\specification.json" Link="specification\%(RecursiveDir)%(Filename)%(Extension)" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+
+  <!-- The applications' designs, read as text: what a screen asks of its rules is read from the XAML alone. -->
+  <ItemGroup>
+    <Content Include="..\..\sample\*\MainWindow.axaml" Link="design\%(RecursiveDir)%(Filename)%(Extension)" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+
+  <!-- Signup's screen as it is made without writing XAML, which the Extension Host's suite makes too. -->
+  <ItemGroup>
+    <Content Include="screen\*.json" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+
+  <!--
+    draw.json has chance in it and no application, so its model is generated here, for the tests of
+    what an outcome looks like bound. order.json is generated here too: with draw it makes this
+    assembly an application of three windows over two rule sets, window\*.axaml, for the tests of
+    several windows.
+  -->
+  <ItemGroup>
+    <CompilerVisibleProperty Include="RootNamespace" />
+    <AdditionalFiles Include="ruleset\draw.json" />
+    <AdditionalFiles Include="ruleset\order.json" />
+    <CompilerVisibleProperty Include="MSBuildProjectDirectory" />
+    <AdditionalFiles Include="window\*.axaml" />
+  </ItemGroup>
+
+</Project>

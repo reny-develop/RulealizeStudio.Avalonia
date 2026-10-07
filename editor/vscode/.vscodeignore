@@ -1,0 +1,12 @@
+# What the .vsix holds is the compiled extension, its walkthrough, and what pack.js puts beside it:
+# the server, the packages a new application restores from, and the example.
+src/**
+test/**
+out/test/**
+.vscode-test/**
+pack.js
+tsconfig.json
+**/*.map
+*.vsix
+.vscode/**
+media/icon.svg

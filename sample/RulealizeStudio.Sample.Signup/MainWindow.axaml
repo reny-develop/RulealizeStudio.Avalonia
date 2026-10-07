@@ -1,0 +1,107 @@
+<!--
+  The whole screen of the signup application, and ordinary XAML: compiled bindings against the
+  model generated from signup.json, every name one the rule set gave.
+
+  What is legal is not written here. Whether "Save" can be pressed is SetName.Apply asking
+  GetValidInputs; what a name may be is SetName.ToLimits, read from the schema; why one was
+  refused lands under the box it was typed in, because the clause knew which parameter it was
+  about. What is written here is what it looks like.
+-->
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:m="using:RulealizeStudio.Sample.Signup"
+        x:DataType="m:SignupModel"
+        Title="Sign up"
+        Width="560" Height="620">
+
+  <Design.DataContext>
+    <m:SignupModel />
+  </Design.DataContext>
+
+  <DockPanel Margin="20">
+
+    <Grid DockPanel.Dock="Top" ColumnDefinitions="*,Auto" Margin="0,0,0,16">
+      <TextBlock Text="Book a table" FontSize="20" FontWeight="SemiBold" />
+      <StackPanel Grid.Column="1" Orientation="Horizontal" Spacing="6">
+        <Button x:Name="Undo" Content="Undo" Command="{Binding Back}" />
+        <Button x:Name="Redo" Content="Redo" Command="{Binding Forward}" />
+      </StackPanel>
+    </Grid>
+
+    <!-- What the rule set says about the booking, bound field by field. -->
+    <Border DockPanel.Dock="Bottom" Padding="12" CornerRadius="6" Background="#14808080">
+      <Grid ColumnDefinitions="Auto,*" RowDefinitions="Auto,Auto,Auto,Auto,Auto" >
+        <Grid.Styles>
+          <Style Selector="TextBlock.label">
+            <Setter Property="Opacity" Value="0.6" />
+            <Setter Property="Margin" Value="0,0,16,4" />
+          </Style>
+        </Grid.Styles>
+        <TextBlock Classes="label" Text="Name" />
+        <TextBlock x:Name="Who" Grid.Column="1" Text="{Binding Booking.Who}" />
+        <TextBlock Classes="label" Grid.Row="1" Text="Seat" />
+        <TextBlock x:Name="Seat" Grid.Row="1" Grid.Column="1" Text="{Binding Booking.Seat}" />
+        <TextBlock Classes="label" Grid.Row="2" Text="Party" />
+        <TextBlock x:Name="Party" Grid.Row="2" Grid.Column="1" Text="{Binding Booking.Party.Size}" />
+        <TextBlock Classes="label" Grid.Row="3" Text="Wants" />
+        <TextBlock x:Name="Wants" Grid.Row="3" Grid.Column="1" Text="{Binding Booking.Party.Wants}" />
+        <TextBlock Classes="label" Grid.Row="4" Text="Ready" />
+        <CheckBox x:Name="Ready" Grid.Row="4" Grid.Column="1" IsHitTestVisible="False"
+                  IsChecked="{Binding Booking.Ready}" />
+      </Grid>
+    </Border>
+
+    <ScrollViewer>
+      <StackPanel Spacing="18" Margin="0,0,0,16">
+
+        <StackPanel Spacing="6" IsVisible="{Binding SetName.IsOffered}">
+          <TextBlock Text="Your name" FontWeight="SemiBold" />
+          <DockPanel>
+            <Button x:Name="SaveName" DockPanel.Dock="Right" Margin="8,0,0,0" Content="Save"
+                    Command="{Binding SetName.Apply}" />
+            <TextBox x:Name="NameBox" Text="{Binding SetName.To}"
+                     MaxLength="{Binding SetName.ToLimits.MaxLength}" />
+          </DockPanel>
+        </StackPanel>
+
+        <StackPanel Spacing="6" IsVisible="{Binding ChooseSeat.IsOffered}">
+          <TextBlock Text="Where would you like to sit?" FontWeight="SemiBold" />
+          <StackPanel Orientation="Horizontal" Spacing="8">
+            <ComboBox x:Name="SeatBox" MinWidth="160"
+                      ItemsSource="{Binding ChooseSeat.SeatOptions}"
+                      SelectedItem="{Binding ChooseSeat.Seat}" />
+            <Button x:Name="ChooseSeat" Content="Choose" Command="{Binding ChooseSeat.Apply}" />
+          </StackPanel>
+        </StackPanel>
+
+        <StackPanel Spacing="6" IsVisible="{Binding SetParty.IsOffered}">
+          <TextBlock Text="How many of you?" FontWeight="SemiBold" />
+          <StackPanel Orientation="Horizontal" Spacing="8">
+            <NumericUpDown x:Name="PartyBox" MinWidth="160" Increment="1" FormatString="0"
+                           Value="{Binding SetParty.Size}"
+                           Minimum="{Binding SetParty.SizeLimits.Minimum}"
+                           Maximum="{Binding SetParty.SizeLimits.Maximum}" />
+            <Button x:Name="SetParty" Content="Set" Command="{Binding SetParty.Apply}" />
+          </StackPanel>
+        </StackPanel>
+
+        <StackPanel Spacing="6" IsVisible="{Binding Note.IsOffered}">
+          <TextBlock Text="Anything we should know?" FontWeight="SemiBold" />
+          <StackPanel Orientation="Horizontal" Spacing="8">
+            <ComboBox x:Name="WantsBox" MinWidth="160"
+                      ItemsSource="{Binding Note.WhatLimits.Choices}"
+                      SelectedItem="{Binding Note.What}" />
+            <Button x:Name="Note" Content="Note it" Command="{Binding Note.Apply}" />
+          </StackPanel>
+        </StackPanel>
+
+        <Button x:Name="Book" Content="Book" FontSize="16" Padding="24,8"
+                Command="{Binding Book.Apply}" />
+
+        <TextBlock x:Name="Done" FontSize="16" IsVisible="{Binding IsTerminal}"
+                   Text="{Binding Ending, StringFormat='All done: {0}.'}" />
+
+      </StackPanel>
+    </ScrollViewer>
+  </DockPanel>
+</Window>

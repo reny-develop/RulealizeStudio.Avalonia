@@ -1,0 +1,45 @@
+<!--
+  The whole screen of the countdown application: a different rule set and a different screen,
+  over the same libraries and nothing added to them.
+
+  The three buttons are a design, not a rule. Which of them can be pressed is Add.Apply asking
+  GetValidInputs for the move whose n is the button's parameter, so at eight the third one is
+  disabled because the guard says so and nothing here does.
+-->
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:m="using:RulealizeStudio.Sample.Countdown"
+        x:DataType="m:CountdownModel"
+        Title="Countdown"
+        Width="420" Height="320">
+
+  <Design.DataContext>
+    <m:CountdownModel />
+  </Design.DataContext>
+
+  <StackPanel Margin="24" Spacing="20" HorizontalAlignment="Center" VerticalAlignment="Center">
+
+    <TextBlock x:Name="Total" HorizontalAlignment="Center" FontSize="64" FontWeight="Bold"
+               Text="{Binding State.Total}" />
+
+    <StackPanel Orientation="Horizontal" Spacing="10" HorizontalAlignment="Center">
+      <StackPanel.Styles>
+        <Style Selector="Button">
+          <Setter Property="MinWidth" Value="64" />
+          <Setter Property="FontSize" Value="18" />
+          <Setter Property="HorizontalContentAlignment" Value="Center" />
+        </Style>
+      </StackPanel.Styles>
+      <Button x:Name="AddOne" Content="+1" Command="{Binding Add.Apply}" CommandParameter="1" />
+      <Button x:Name="AddTwo" Content="+2" Command="{Binding Add.Apply}" CommandParameter="2" />
+      <Button x:Name="AddThree" Content="+3" Command="{Binding Add.Apply}" CommandParameter="3" />
+    </StackPanel>
+
+    <StackPanel Orientation="Horizontal" Spacing="10" HorizontalAlignment="Center">
+      <Button x:Name="Undo" Content="Undo" Command="{Binding Back}" />
+      <TextBlock x:Name="Done" VerticalAlignment="Center" IsVisible="{Binding IsTerminal}"
+                 Text="{Binding Ending}" FontWeight="SemiBold" />
+    </StackPanel>
+
+  </StackPanel>
+</Window>
