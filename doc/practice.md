@@ -25,6 +25,8 @@ bar on the left.
 **You see** the view say there is no application here yet, with **New application**, **Start from
 an example** and **Walkthrough** under it.
 
+![The view in an empty folder: New application, Start from an example, Walkthrough](image/practice-folder.png)
+
 ## 2. Make the application — 3 minutes
 
 **New application**, and a name for it in letters, such as **TeaOrder**. The first time, you are
@@ -32,6 +34,8 @@ asked to fetch the .NET SDK: **Fetch**, and wait.
 
 **You see** in the view, under the application's name: **Screens** with `MainWindow.axaml` under
 it, **Specifications** with `specification.json`, and **Test cases**, saying *once there are rules*. In the Explorer there is a folder of that name.
+
+![The view with TeaOrder: Screens, Specifications and Test cases](image/practice-application.png)
 
 ## 3. Keep it — 1 minute
 
@@ -52,12 +56,15 @@ Drag what you want onto the window, to where you want it — a **TextBlock** for
 **ComboBox** for a choice, a **NumericUpDown** or a **TextBox** for something typed, a **Button**
 for something done. **Find a control** finds one by its name. Drag one on the window to move it, and
 the square at its bottom right corner to change its size. Choose one, on the window or under **On
-the window**, to give it its words or **Delete** it, and under **Properties** to change anything
-else of it — its colours, its font, its size, its alignment; choose the window itself for its size,
-its title and its background. Write the words in your own language.
+the window**, to write what it says on the window in **Its words** — *Order* on a button, say — or
+**Delete** it, and under **Properties** to change anything else of it — its colours, its font, its
+size, its alignment; choose the window itself for its size, its title and its background. Write the
+words in your own language.
 
 **You see** the window change within a second of each change, as it will look: each control where
 you let go of it, at the size you gave it.
+
+![The window being designed, with the Order button chosen and its properties beside it](image/practice-screen.png)
 
 Every property under **Properties** is Avalonia's: the control's own, those it inherits, and those
 what holds it lends it, written with that one's name first — **Grid.Row**. What each does is
@@ -94,6 +101,8 @@ nothing is moves it.
 **You see** each state and transition in the diagram and each read as a sentence; any one chosen
 says *Bound to no rule yet*.
 
+![The specification as a diagram, with Choose a size chosen and bound to no rule yet](image/practice-specification.png)
+
 ## 6. Keep it — 1 minute
 
 In Source Control, a message such as *screen and specification*, and **Commit**.
@@ -111,12 +120,20 @@ and which tools it has.
 - **Test cases** in the view no longer says *once there are rules*, and has the rules' name
   under it.
 - Under **specification.json** and **MainWindow.axaml**, *only bound*, or *n changed beyond binding* with each
-  change on a line of its own below it. Expect the screen's layout among them.
+  change on a line of its own below it. Expect a few on the screen that binding it needed — how a
+  box shows a number, say.
   Anything else listed — a state reworded, a control taken out — is the agent changing what you
   made; ask it why, or to put it back.
 - Opening the specification, each element is now bound to rules. A rule marked *not in the rules*,
   or a problem in the Problems panel, is a disagreement between your specification and the rules:
   tell the agent.
+- One warning there is nothing to worry about: *Unable to load schema*, on the specification or on
+  any other file of the application VS Code has open. The top of each file names what kind of file
+  it is, and VS Code reads that name as a place to fetch a description of the file from. There is
+  nothing to fetch, so it says so. Nothing is wrong with the file, and you can leave the warning
+  where it is.
+
+![After the agent: the window with two changes beyond binding, the specification only bound, and tea under Test cases](image/practice-rules.png)
 
 ## 8. Read its test cases — 5 minutes
 
@@ -132,12 +149,17 @@ stand, the **Next operations** with where each leads, and the **Refused operatio
 says; for a value refused, the window as it says the refusal, and **What the refusal says**. **−**
 and **+** at the top right draw the windows smaller or larger, and a window clicked opens larger.
 
+![The test cases of tea, with a refused order of no cups chosen: its step, the window as it refuses, and what the refusal says](image/practice-test-cases.png)
+
 Where something is typed, the rules cannot list every value. Under **Chosen values**, **Add** one:
 the situation, the operation and the value, and it is read as the rest is. Each one chosen is listed
 there with whether the rules take it.
 
 Look for what you did not mean: something possible that should not be, something you cannot reach,
 a refusal missing or worded wrong.
+
+Before asking for a change, commit what the agent made, in Source Control as in step 6, even where
+it is not yet what you meant: what a change did is read against what you last committed.
 
 ## 9. Ask for a change, and read what it did — 5 minutes a change
 
@@ -151,6 +173,8 @@ what can be done now and could not, what is refused now, and the rest. In the li
 test case the change touched is marked too, and **Compare with before the change** shows it so.
 Either list folds away by its heading, and opens again. Under **specification.json** and **MainWindow.axaml** in
 the view, what changed of them beyond binding them, as in step 7.
+
+![Since the last commit: the start changed, with ordering six to nine cups now refused](image/practice-change.png)
 
 It stays there until you commit, whether or not the agent derived the test design again. Where the
 change is not what you meant, ask again; to throw it away, ask the agent to, or **Discard Changes**
@@ -168,5 +192,6 @@ next thing you see.
 
 Ask the agent to start the application, or `dotnet run` in its folder in the terminal.
 
-**You see** the window you read in step 8, doing what the rules allow and refusing what they refuse,
-in your words.
+**You see** the window you read in step 8, doing what the rules allow and refusing what they refuse:
+its controls say what you wrote in **Its words** in step 4, and each refusal says what you read under
+**What the refusal says** in step 8.
